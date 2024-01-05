@@ -1,3 +1,8 @@
+### Singleton
+
+- assures that only on object of some class is instantiated.
+- it breaks Single Responsibility Principle because the Class is concerned with
+controlling the instances and doing its original stuff at the same time. 
 
 ### Strategy
 
