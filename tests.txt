@@ -1,0 +1,8 @@
+### Arrange-Act-Assert
+
+The AAA (Arrange-Act-Assert) test pattern states that you can divide your test
+in three stages:
+
+1. Setup the environment you're going to test.
+2. Perform actions your software would usually do and you're willing to test.
+3. Make sure the results obtained and states of the variables are correct.
