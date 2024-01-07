@@ -31,3 +31,15 @@ doesn't have steps.
 - it breaks Open Closed Principle while Factory Method and Abstract Factory
 don't. If you want to build other stuff, you'll have to add ifs and elses in the
 Object Factory.
+
+### Factory Method
+
+- when talking about Factories, usually the terms Product and Object are
+interchangeable.
+- the difference to Simple Factory is that the Creator now has an interface and
+each concrete Creator creates a diferent Concrete Product.
+
+### Abstract Factory
+
+- the difference to Factory Method is that we have more than one Product
+interface, and hence, each Creator creates more than one Product family.
