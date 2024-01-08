@@ -1,10 +1,55 @@
-### Singleton
+### CREATIONAL PATTERNS
+
+## Builder
+
+- Factory is concerned with what I build, while Builder is concerned with How I
+Build.
+- Factory has an interface for each Product it creates, while Builder don't.
+- Builder has coordinated steps which are coordinated by a Director. Factorry
+doesn't have steps.
+- Builder can be configured to work with chaining method calls.
+
+## Singleton
 
 - assures that only on object of some class is instantiated.
 - it breaks Single Responsibility Principle because the Class is concerned with
 controlling the instances and doing its original stuff at the same time. 
 
-### Strategy
+## Simple Factory (not GoF)
+
+- this is not an official Gang Of Four pattern.
+- it breaks Open Closed Principle while Factory Method and Abstract Factory
+don't. If you want to build other stuff, you'll have to add ifs and elses in the
+Object Factory.
+
+## Factory Method
+
+- when talking about Factories, usually the terms Product and Object are
+interchangeable.
+- the difference to Simple Factory is that the Creator now has an interface and
+each concrete Creator creates a diferent Concrete Product.
+
+## Abstract Factory
+
+- the difference to Factory Method is that we have more than one Product
+interface, and hence, each Creator creates more than one Product family.
+
+
+### STRUCTURAL PATTERNS
+
+## Adapter
+
+- aka: Wrapper pattern
+- converts the interface of a class into another interface the clients expect.
+- Adapter lets classes work together that couldn't otherwise because of
+incompatible interfaces.
+- it aids SRP because it separates Business Logic from interface conversions.
+- it aids OCP because we can expand the system infra with adapters without
+touching business logic.
+
+### BEHAVIORAL PATTERNS
+
+## Strategy
 
 - defines a family of algorithms, encapsulates each one, and makes them 
 interchangeable (via composition).
@@ -16,30 +61,5 @@ the guts.
 - you can change behavior at runtime.
 - HAS-A is better than IS-A (favor composition over inheritance).
 
-### Builder
 
-- Factory is concerned with what I build, while Builder is concerned with How I
-Build.
-- Factory has an interface for each Product it creates, while Builder don't.
-- Builder has coordinated steps which are coordinated by a Director. Factorry
-doesn't have steps.
-- Builder can be configured to work with chaining method calls.
 
-### Simple Factory (not GoF)
-
-- this is not an official Gang Of Four pattern.
-- it breaks Open Closed Principle while Factory Method and Abstract Factory
-don't. If you want to build other stuff, you'll have to add ifs and elses in the
-Object Factory.
-
-### Factory Method
-
-- when talking about Factories, usually the terms Product and Object are
-interchangeable.
-- the difference to Simple Factory is that the Creator now has an interface and
-each concrete Creator creates a diferent Concrete Product.
-
-### Abstract Factory
-
-- the difference to Factory Method is that we have more than one Product
-interface, and hence, each Creator creates more than one Product family.
