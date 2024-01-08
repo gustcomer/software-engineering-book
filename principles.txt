@@ -1,0 +1,10 @@
+### SOLID
+
+Single Responsibility Principle (SRP)
+
+- Make one classe corresponding to each actor.
+- The name Single Responsibility Principle may give you the impression that one
+module should do just one thing. Well, that's true, but this is a Clean Code
+principle, this is not SRP.
+- The module should have only one reason to change, that means, one user or
+stakeholder. User, stakeholders are also known as actors of the system.
