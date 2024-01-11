@@ -1,4 +1,4 @@
-### Single Responsibility Principle
+### Single Responsibility Principle (SRP)
 
 - It's preferable to create one Class corresponding to each actor.
 - The name Single Responsibility Principle may give the impression that a module
@@ -7,3 +7,18 @@ principle, but this is not SRP.
 - A module should have one, and only one, reason to change. A module should be
 responsible to one, and only one, user or stakeholder. A module should be
 responsible to one, and only one, actor.
+
+### Open Closed Principle (OCP)
+
+- A software artifact should be open for extension but closed for modification.
+- In order to do that, you sould separate the things that change for whatever
+reason and organize the dependencies in a way that the things that change more
+frequently stay behind more stable interfaces that change less frequently
+(Dependency Inversion Principle - DIP)
+- One way of implementing Dependency Inversion is through Strategy Pattern, but
+that is not the only one.
+- We reach OCP transforming the dependencies into a unidirectional graph like a
+tree.
+- Or yet: partitioning the system into components, and arranging those
+components into a dependency hierarchy that protects higher-level components
+from changes in lower-level components.
