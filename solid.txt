@@ -22,3 +22,15 @@ tree.
 - Or yet: partitioning the system into components, and arranging those
 components into a dependency hierarchy that protects higher-level components
 from changes in lower-level components.
+
+### Liskov Substitution Principle (LSP)
+
+- The derived classes should be interchangeable with theis base classes.
+- If a class interacts with some interface, this class should be able to
+interact with all subclasses that implement that interface without worrying with
+the behavior of the subclass. Only worring with the superclass behavior.
+- As a classic example, a Rectangle interface should not have a Square subclass.
+For this to work, we would have to put ifs in the context using the Square class
+and it would be a disaster.
+- We would have to manually assure the Invariant condition between Height and
+Width (in a square they should be equal).
