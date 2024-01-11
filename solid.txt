@@ -1,0 +1,9 @@
+### Single Responsibility Principle
+
+- It's preferable to create one Class corresponding to each actor.
+- The name Single Responsibility Principle may give the impression that a module
+should do one and only one thing. This is a valid Clean Code and refactor
+principle, but this is not SRP.
+- A module should have one, and only one, reason to change. A module should be
+responsible to one, and only one, user or stakeholder. A module should be
+responsible to one, and only one, actor.
