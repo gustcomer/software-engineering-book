@@ -1,0 +1,13 @@
+Clean Code
+Object Oriented Programming Principles
+SOLID Principles
+GoF Patterns
+Refactoring
+DDD
+Clean Architecture
+Hexagonal
+Microservices
+Event Driven Systems
+Command Query Responsibility Segregation
+Tests
+Patterns of Enterprise Architecture
