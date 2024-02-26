@@ -34,3 +34,6 @@ For this to work, we would have to put ifs in the context using the Square class
 and it would be a disaster.
 - We would have to manually assure the Invariant condition between Height and
 Width (in a square they should be equal).
+
+================================================================================
+Glossary

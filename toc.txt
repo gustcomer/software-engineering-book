@@ -1,8 +1,10 @@
+Requirements
 Clean Code
 Object Oriented Programming Principles
 SOLID Principles
 GoF Patterns
 Refactoring
+Patterns of Enterprise Architecture
 DDD
 Clean Architecture
 Hexagonal
@@ -10,4 +12,3 @@ Microservices
 Event Driven Systems
 Command Query Responsibility Segregation
 Tests
-Patterns of Enterprise Architecture
