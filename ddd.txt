@@ -4,3 +4,5 @@ Questions
 
 ================================================================================
 Glossary
+
+Entity: an object defined primarily by its identity.
