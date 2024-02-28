@@ -7,3 +7,4 @@ Glossary
 
 Context: a set of conditions that, if satisfied, make the Model be logically consistent, without contradictory or overlapping definitions.
 Entity: an object defined primarily by its identity.
+Model: a simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
