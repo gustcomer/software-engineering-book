@@ -1,3 +1,7 @@
+================================================================================
+Assertions
+
+- The Bounded Context is part of the Solution Space
 
 ================================================================================
 Questions
@@ -5,9 +9,12 @@ Questions
 ================================================================================
 Glossary
 
+Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
 Context: set of conditions that, if satisfied, make the Model be logically consistent, without contradictory or overlapping definitions.
 Core Domain: parts of the model distinctive and central to the purposes of the intended application.
 Domain: sphere of knowledge and activity around the problem which the proposed software is to solve.
 Entity: object defined primarily by its identity.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
+Problem Space:
+Solution Space:
 Subdomain: specific area within the overall domain.
