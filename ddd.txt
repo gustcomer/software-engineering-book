@@ -1,9 +1,14 @@
 ================================================================================
 Assertions
 
-- The three pillars of DDD are Strategic Design, Tactical Design and a Ubiquitous Language
+- The three pillars of DDD are Strategic Design, Tactical Design and a Ubiquitous Language.
+- Strategic Design relates not only to the Problem Space, but parts of the Solution space too.
+- Strategic Design's objective is to define the Bounded Contexts, the Ubiquitous Language and the Context Maps.
+- Each Bounded Context has a Ubiquitous Language.
+- Each Ubiquitous Language describes a Model. And Language is Model.
 - A Domain has many Subdomains
 - A Domain Model has many Bounded Contexts.
+- A Bounded Context can be represented by a software System.
 - The Bounded Context is part of the Solution Space.
 - The Domain Model has Bounded Contexts
 - There is one Ubiquitous Language per Bounded Context
@@ -25,6 +30,7 @@ Entity: object defined primarily by its identity.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
 Solution Space: encompasses the model used to represent the problem and what software to build.
-Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages and the relationships between teams.
+Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages, the relationships between teams and what software to Build.
 Subdomain: specific area within the overall domain.
-Ubiquitous Language: 
+System: intercommunicating software components that aim to solve a problem or part of it.
+Ubiquitous Language: describe the Model inside a Bounded Context with terms and concepts of the business domain, where there should be no ambiguity.
