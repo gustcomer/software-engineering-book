@@ -5,6 +5,7 @@ Assertions
 - Strategic Design relates not only to the Problem Space, but parts of the Solution space too.
 - Strategic Design's objective is to define the Bounded Contexts, the Ubiquitous Language and the Context Maps.
 - Each Bounded Context has a Ubiquitous Language.
+- Each Bounded Context is a linguistic boundary.
 - Each Ubiquitous Language describes a Model. And Language is Model.
 - A Domain has many Subdomains
 - A Domain Model has many Bounded Contexts.
@@ -22,6 +23,7 @@ Glossary
 
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
 Context: set of conditions that, if satisfied, make the Model be logically consistent, without contradictory or overlapping definitions.
+Context Map: depicts the communication patterns between Bounded Contexts with a collection of patterns.
 Core Domain: parts of the model distinctive and central to the purposes of the intended application.
 DDD: software development approach centered around the domain and the modeling according to input from that domain's experts.
 Domain: sphere of knowledge and activity around the problem which the proposed software is to solve.
