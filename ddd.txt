@@ -23,7 +23,8 @@ Domain: sphere of knowledge and activity around the problem which the proposed s
 Domain Model: an object model of the domain that incorporates both behavior and data.
 Entity: object defined primarily by its identity.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
-Problem Space: 
-Solution Space:
+Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
+Solution Space: encompasses the model used to represent the problem and what software to build.
+Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages and the relationships between teams.
 Subdomain: specific area within the overall domain.
 Ubiquitous Language: 
