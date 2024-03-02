@@ -1,6 +1,7 @@
 ================================================================================
 Assertions
 
+- The three pillars of DDD are Strategic Design, Tactical Design and a Ubiquitous Language
 - A Domain has many Subdomains
 - A Domain Model has many Bounded Contexts.
 - The Bounded Context is part of the Solution Space.
@@ -19,7 +20,7 @@ Context: set of conditions that, if satisfied, make the Model be logically consi
 Core Domain: parts of the model distinctive and central to the purposes of the intended application.
 DDD: software development approach centered around the domain and the modeling according to input from that domain's experts.
 Domain: sphere of knowledge and activity around the problem which the proposed software is to solve.
-Domain Model: 
+Domain Model: an object model of the domain that incorporates both behavior and data.
 Entity: object defined primarily by its identity.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
 Problem Space: 
