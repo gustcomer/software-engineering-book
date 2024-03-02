@@ -1,7 +1,12 @@
 ================================================================================
 Assertions
 
-- The Bounded Context is part of the Solution Space
+- A Domain has many Subdomains
+- A Domain Model has many Bounded Contexts.
+- The Bounded Context is part of the Solution Space.
+- The Domain Model has Bounded Contexts
+- There is one Ubiquitous Language per Bounded Context
+- There is one Model per Bounded Context, and hence one Uniquitous Language
 
 ================================================================================
 Questions
@@ -12,9 +17,12 @@ Glossary
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
 Context: set of conditions that, if satisfied, make the Model be logically consistent, without contradictory or overlapping definitions.
 Core Domain: parts of the model distinctive and central to the purposes of the intended application.
+DDD: software development approach centered around the domain and the modeling according to input from that domain's experts.
 Domain: sphere of knowledge and activity around the problem which the proposed software is to solve.
+Domain Model: 
 Entity: object defined primarily by its identity.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
-Problem Space:
+Problem Space: 
 Solution Space:
 Subdomain: specific area within the overall domain.
+Ubiquitous Language: 
