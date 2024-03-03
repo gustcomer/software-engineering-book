@@ -2,15 +2,13 @@
 Assertions
 
 
-
-
-
 ================================================================================
 Questions
 
 ================================================================================
 Glossary
 
+Assessment View: the classical DDD Diagram of Domain with its Core Domain, Subdomains and Bounded Contexts.
 Big Ball of Mud: architecture that lacks any modular design or structure, and thus becomes a mass of disorganized code.
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
   - Each Bounded Context has a Ubiquitous Language.
@@ -26,7 +24,9 @@ Domain: sphere of knowledge and activity around the problem which the proposed s
   - A Domain has many Subdomains.
   - A Domain Model has many Bounded Contexts.
 Domain Model: an object model of the domain that incorporates both behavior and data.
-  - The Domain Model has Bounded Contexts
+Domain Model: software model of the very specific business domain you are working in.
+  - Each Bounded Bounded context has a Domain Model at its core.
+  - A Bounded Context is a conceptual boundary where a domain model is applicable.
 Entity: object defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
