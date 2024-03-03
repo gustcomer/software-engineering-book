@@ -1,19 +1,9 @@
 ================================================================================
 Assertions
 
-- The three pillars of DDD are Strategic Design, Tactical Design and a Ubiquitous Language.
-- Strategic Design relates not only to the Problem Space, but parts of the Solution space too.
-- Strategic Design's objective is to define the Bounded Contexts, the Ubiquitous Language and the Context Maps.
-- Each Bounded Context has a Ubiquitous Language.
-- Each Bounded Context is a linguistic boundary.
-- Each Ubiquitous Language describes a Model. And Language is Model.
-- A Domain has many Subdomains
-- A Domain Model has many Bounded Contexts.
-- A Bounded Context can be represented by a software System.
-- The Bounded Context is part of the Solution Space.
-- The Domain Model has Bounded Contexts
-- There is one Ubiquitous Language per Bounded Context
-- There is one Model per Bounded Context, and hence one Uniquitous Language
+
+
+
 
 ================================================================================
 Questions
@@ -22,17 +12,33 @@ Questions
 Glossary
 
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
+  - Each Bounded Context has a Ubiquitous Language.
+  - Each Bounded Context is a linguistic boundary.
+  - A Bounded Context can be represented by a Software System.
 Context: set of conditions that, if satisfied, make the Model be logically consistent, without contradictory or overlapping definitions.
 Context Map: depicts the communication patterns between Bounded Contexts with a collection of patterns.
 Core Domain: parts of the model distinctive and central to the purposes of the intended application.
+Core Domain: part of the business Domain that is of primary importance to the success of the organization.
 DDD: software development approach centered around the domain and the modeling according to input from that domain's experts.
+  - The three pillars of DDD are Strategic Design, Tactical Design and a Ubiquitous Language.
 Domain: sphere of knowledge and activity around the problem which the proposed software is to solve.
+  - A Domain has many Subdomains.
+  - A Domain Model has many Bounded Contexts.
 Domain Model: an object model of the domain that incorporates both behavior and data.
+  - The Domain Model has Bounded Contexts
 Entity: object defined primarily by its identity.
+Generic Subdomain: captures nothing special to the business, yet it is required.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
+  - There is one Model per Bounded Context, and hence one Uniquitous Language.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
 Solution Space: encompasses the model used to represent the problem and what software to build.
+  - The Bounded Context is part of the Solution Space.
 Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages, the relationships between teams and what software to Build.
+  - Strategic Design relates not only to the Problem Space, but parts of the Solution space too.
+  - Strategic Design's objective is to define the Bounded Contexts, the Ubiquitous Language and the Context Maps.
 Subdomain: specific area within the overall domain.
+Supporting Subdomain: model some aspect of the business that is essential yet not Core
 System: intercommunicating software components that aim to solve a problem or part of it.
 Ubiquitous Language: describe the Model inside a Bounded Context with terms and concepts of the business domain, where there should be no ambiguity.
+  - Each Ubiquitous Language describes a Model. And Language is Model.
+  - There is one Ubiquitous Language per Bounded Context
