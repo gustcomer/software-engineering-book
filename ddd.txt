@@ -11,6 +11,7 @@ Questions
 ================================================================================
 Glossary
 
+Big Ball of Mud: architecture that lacks any modular design or structure, and thus becomes a mass of disorganized code.
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
   - Each Bounded Context has a Ubiquitous Language.
   - Each Bounded Context is a linguistic boundary.
