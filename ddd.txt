@@ -27,11 +27,13 @@ Domain Model: an object model of the domain that incorporates both behavior and 
 Domain Model: software model of the very specific business domain you are working in.
   - Each Bounded Bounded context has a Domain Model at its core.
   - A Bounded Context is a conceptual boundary where a domain model is applicable.
+  - The Domain Model expresses a Ubiquitous Language as a software model.
 Entity: object defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
   - There is one Model per Bounded Context, and hence one Uniquitous Language.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
+Service: stateless operation in the domain that fulfills a domain-specific task.
 Solution Space: encompasses the model used to represent the problem and what software to build.
   - The Bounded Context is part of the Solution Space.
 Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages, the relationships between teams and what software to Build.
