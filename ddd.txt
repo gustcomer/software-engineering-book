@@ -23,13 +23,13 @@ DDD: software development approach centered around the domain and the modeling a
   - The three pillars of DDD are Strategic Design, Tactical Design and a Ubiquitous Language.
 Domain: sphere of knowledge and activity around the problem which the proposed software is to solve.
   - A Domain has many Subdomains.
-  - A Domain Model has many Bounded Contexts.
+  - A Domain Model has many Bounded Contexts. 
 Domain Model: an object model of the domain that incorporates both behavior and data.
 Domain Model: software model of the very specific business domain you are working in.
   - Each Bounded Bounded context has a Domain Model at its core.
   - A Bounded Context is a conceptual boundary where a domain model is applicable.
   - The Domain Model expresses a Ubiquitous Language as a software model.
-Entity: object defined primarily by its identity.
+Entity: representation of an object in the Domain defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
   - There is one Model per Bounded Context, and hence one Uniquitous Language.
