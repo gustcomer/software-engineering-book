@@ -50,3 +50,4 @@ System: intercommunicating software components that aim to solve a problem or pa
 Ubiquitous Language: describe the Model inside a Bounded Context with terms and concepts of the business domain, where there should be no ambiguity.
   - Each Ubiquitous Language describes a Model. And Language is Model.
   - There is one Ubiquitous Language per Bounded Context
+Value Object: immutable object that represents a specific value with no identity.
