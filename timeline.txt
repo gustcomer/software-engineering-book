@@ -1,3 +1,5 @@
 1994, Nov - Design Patterns: Elements of Reusable Object-Oriented Software Book
+1995, Oct - Research paper by Ken Schwaber and Jeff Sutherland presenting Scrum. 
 1999, Oct - Extreme Programming Book
 2001, Feb - Manifesto for Agile Software Development
+2002 - Scrum Alliance founded by Ken Schwaber, Mike Cohn and Esther Derby.
