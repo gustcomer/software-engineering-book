@@ -10,12 +10,20 @@ Glossary
 
 Daily Scrum: 15-minute event for the Developers of the Scrum Team inspect progress toward the Sprint Goal and adapt the Sprint.
 Product Backlog: ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team.
+  - the PB contains a commitment with the Product Goal.
+Product Increment: whatever you previously built, plus anything new you just finished in the latest sprint, all integrated, tested, and ready to be delivered or deployed.
+  - the PI contains a commitment with the Definition of Done.
 Product Owner: accountable for maximizing the value of the product resulting from the work of the Scrum Team.
-  - the PO is accountable for effective Product Backlog management
+  - the PO is accountable for effective Product Backlog management.
 Scrum: lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems.
+Scrum Artifacts: Product Backlog, Spring Backlog, Increment.
 Scrum Events: Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.
 Scrum Master: accountable for establishing Scrum as defined in the Scrum Guide. They do this by helping everyone understand Scrum theory and practice, both within the Scrum Team and the organization.
 Scrum Team: small team of people consisting of one Scrum Master, one Product Owner and Developers.
 Sprint: fixed event of one month or less when a scrum team works to complete a set amount of work.
+Sprint Backlog: list of tasks identified by the Scrum team to be completed during the Scrum sprint.
+  - the Sprint Backlog is composed of the Sprint Goal (why), the set of Product Backlog items selected for the Sprint (what), as well as an actionable plan for delivering the Increment (how).
+  - the SB contains a commitment with the Sprint Goal.
 Sprint Planning: event that defines what can be delivered and kicks of the Sprint.
+Sprint Retrospective: teams reflect on what went well and what could be improved for their next sprint.
 Sprint Review: a collaborative meeting held at the end of every sprint. The Scrum Team presents the results of their work to key stakeholders.
