@@ -1,9 +1,21 @@
+Process
+
+1. A Product Owner orders the work for a complex problem into a Product Backlog.
+2. The Scrum Team turns a selection of the work into an Increment of value during a Sprint.
+3. The Scrum Team and its stakeholders inspect the results and adjust for the next Sprint.
+4. Repeat
 
 ================================================================================
 Glossary
 
+Daily Scrum: 15-minute event for the Developers of the Scrum Team inspect progress toward the Sprint Goal and adapt the Sprint.
+Product Backlog: ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team.
 Product Owner: accountable for maximizing the value of the product resulting from the work of the Scrum Team.
   - the PO is accountable for effective Product Backlog management
 Scrum: lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems.
+Scrum Events: Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.
 Scrum Master: accountable for establishing Scrum as defined in the Scrum Guide. They do this by helping everyone understand Scrum theory and practice, both within the Scrum Team and the organization.
 Scrum Team: small team of people consisting of one Scrum Master, one Product Owner and Developers.
+Sprint: fixed event of one month or less when a scrum team works to complete a set amount of work.
+Sprint Planning: event that defines what can be delivered and kicks of the Sprint.
+Sprint Review: a collaborative meeting held at the end of every sprint. The Scrum Team presents the results of their work to key stakeholders.
