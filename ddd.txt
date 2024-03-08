@@ -29,6 +29,7 @@ Domain Model: software model of the very specific business domain you are workin
   - Each Bounded Bounded context has a Domain Model at its core.
   - A Bounded Context is a conceptual boundary where a domain model is applicable.
   - The Domain Model expresses a Ubiquitous Language as a software model.
+Service[Domain Service]: stateless operation that fulfills a domain-specific task.
 Entity: representation of an object in the Domain defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
