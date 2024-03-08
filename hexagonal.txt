@@ -1,0 +1,27 @@
+Hexagonal Architecture [Ports & Adapters]
+
+================================================================================
+Assertions
+
+- Allow an application to equally be driven by users, programs, automated test
+or batch scripts, and to be developed and tested in isolation from its eventual
+run-time devices and databases.
+
+
+================================================================================
+Glossary
+
+Actor
+Adapter
+Application
+Business Logic
+Component
+Configurator
+Domain
+Driver Port
+Driven Port
+Inside Layer
+Mock Object
+Outside Layer
+Port
+Use Case Boundary
