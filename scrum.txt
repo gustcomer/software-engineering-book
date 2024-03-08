@@ -8,8 +8,10 @@ Process
 ================================================================================
 Glossary
 
+Backlog Item: items that are stored on a product backlog that could add value to a product being developed.
 Daily Scrum: 15-minute event for the Developers of the Scrum Team inspect progress toward the Sprint Goal and adapt the Sprint.
 Definition of Done: formal description of the state of the Increment when it meets the quality measures required for the product.
+Planned Releases: collaborative process where the Scrum team and stakeholders determine which product backlog items will be included in upcoming releases.
 Product Backlog: ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team.
   - the PB contains a commitment with the Product Goal.
 Product Goal: future state of the product which can serve as a target for the Scrum Team to plan against.
@@ -17,6 +19,7 @@ Product Increment: whatever you previously built, plus anything new you just fin
   - the PI contains a commitment with the Definition of Done.
 Product Owner: accountable for maximizing the value of the product resulting from the work of the Scrum Team.
   - the PO is accountable for effective Product Backlog management.
+Product Release: delivery of one or more Product Increments after one or more Sprints.
 Scrum: lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems.
 Scrum Artifacts: Product Backlog, Spring Backlog, Increment.
 Scrum Events: Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.
