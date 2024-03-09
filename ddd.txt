@@ -24,6 +24,7 @@ DDD: software development approach centered around the domain and the modeling a
 Domain: sphere of knowledge and activity around the problem which the proposed software is to solve.
   - A Domain has many Subdomains.
   - A Domain Model has many Bounded Contexts. 
+Domain Event: something that happened in the domain that you want other parts of the same domain to be aware of.
 Domain Model: an object model of the domain that incorporates both behavior and data.
 Domain Model: software model of the very specific business domain you are working in.
   - Each Bounded Bounded context has a Domain Model at its core.
