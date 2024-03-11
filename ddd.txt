@@ -40,6 +40,7 @@ Modules: part of a program that contains one or more routines related to one are
   - While modules are used to aid development, Components are standalone units that do specific things and interact with other components.
   - Also known in other languages as Packages, Namespaces.
   - In Modules you hide information, while in libraries you call the librar.
+Partnership: relationship where two or more bounded contexts collaborate and share information.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
 Service: stateless operation in the domain that fulfills a domain-specific task.
 Solution Space: encompasses the model used to represent the problem and what software to build.
