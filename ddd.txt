@@ -43,6 +43,7 @@ Modules: part of a program that contains one or more routines related to one are
 Partnership: relationship where two or more bounded contexts collaborate and share information.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
 Service: stateless operation in the domain that fulfills a domain-specific task.
+Shared Kernel: special type of Bounded Context that contains code and data shared across multiple bounded contexts within the same domain.
 Solution Space: encompasses the model used to represent the problem and what software to build.
   - The Bounded Context is part of the Solution Space.
 Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages, the relationships between teams and what software to Build.
