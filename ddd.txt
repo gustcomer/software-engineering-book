@@ -9,6 +9,7 @@ Questions
 Glossary
 
 Aggregates: cluster of domain objects that form a consistency boundary and are treated as a single unit.
+Anti-Corruption Layer: ACL, prevent the intrusion of foreign concepts and models into the domain model.
 Assessment View: the classical DDD Diagram of Domain with its Core Domain, Subdomains and Bounded Contexts.
 Big Ball of Mud: architecture that lacks any modular design or structure, and thus becomes a mass of disorganized code.
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
