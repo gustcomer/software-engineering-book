@@ -44,6 +44,7 @@ Modules: part of a program that contains one or more routines related to one are
   - While modules are used to aid development, Components are standalone units that do specific things and interact with other components.
   - Also known in other languages as Packages, Namespaces.
   - In Modules you hide information, while in libraries you call the librar.
+Open-Host Service: defines a protocol that gives access to the system in question as a set of services and opens it so that all who need to integrate with it can use it.
 Partnership: relationship where two or more bounded contexts collaborate and share information.
   - the teams in the two BCs will succeed or fail together.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
