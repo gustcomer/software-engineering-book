@@ -13,7 +13,7 @@ Glossary
 
 Actor
 Adapter
-Application
+Application: includes all the business logic as well as the services responsible for various functionalities and use cases.
 Business Logic
 Component
 Configurator

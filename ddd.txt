@@ -17,7 +17,7 @@ Bounded Context: part of the software where particular definitions, rules and te
   - Each Bounded Context is a linguistic boundary.
   - A Bounded Context can be represented by a Software System.
 Components: units of deployment that do specific things and interact with other components.
-Conformist: the upstream team has no motivation to profide for the downstream team's need.
+Conformist: the upstream team has no motivation to provide for the downstream team's need.
 Context: set of conditions that, if satisfied, make the Model be logically consistent, without contradictory or overlapping definitions.
 Context Map: depicts the communication patterns between Bounded Contexts with a collection of patterns.
 Core Domain: parts of the model distinctive and central to the purposes of the intended application.
