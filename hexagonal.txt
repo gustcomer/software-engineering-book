@@ -12,16 +12,18 @@ run-time devices and databases.
 Glossary
 
 Actor
-Adapter
+Adapter: a component in the sense of the GoF Adapter pattern that coordinates the exchanges between the external world and the ports.
 Application: includes all the business logic as well as the services responsible for various functionalities and use cases.
 Business Logic
 Component
 Configurator
 Domain
+Driver: components that use the Application at a Port.
+  - it's the user-side that communicates with the Application
 Driver Port
 Driven Port
 Inside Layer
 Mock Object
 Outside Layer
-Port
+Port: an interface that defines the contract between the core logic and the external world.
 Use Case Boundary
