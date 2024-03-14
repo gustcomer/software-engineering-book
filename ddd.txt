@@ -48,6 +48,10 @@ Modules: part of a program that contains one or more routines related to one are
   - In Modules you hide information, while in libraries you call the library.
   - A module can be seen as a boundary, as in Bounded Context.
 Open-Host Service: defines a protocol that gives access to the system in question as a set of services and opens it so that all who need to integrate with it can use it.
+  - is a public API.
+  - the team providing the open-host service is a upstream team in 99.99% of the times.
+  - the Upstream team is providing a Model to the Downstream team.
+  - the Downstream team can implement an Anti-Corruption Layer
 Partnership: relationship where two or more bounded contexts collaborate and share information.
   - the teams in the two BCs will succeed or fail together.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
