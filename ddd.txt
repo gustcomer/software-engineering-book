@@ -13,6 +13,7 @@ Anti-Corruption Layer: ACL, prevent the intrusion of foreign concepts and models
 Assessment View: the classical DDD Diagram of Domain with its Core Domain, Subdomains and Bounded Contexts.
 Big Ball of Mud: architecture that lacks any modular design or structure, and thus becomes a mass of disorganized code.
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
+Bounded Context: boundary for a model expressed in a consistent (ubiquitous) language tailored around a specific purpose.
   - Each Bounded Context has a Ubiquitous Language.
   - Each Bounded Context is a linguistic boundary.
   - A Bounded Context can be represented by a Software System.
@@ -39,11 +40,13 @@ Service[Domain Service]: stateless operation that fulfills a domain-specific tas
 Entity: representation of an object in the Domain defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
+  - A Model contains Business Rules, Decisions, Policies.
   - There is one Model per Bounded Context, and hence one Uniquitous Language.
 Modules: part of a program that contains one or more routines related to one area of the functionality of the software application.
   - While modules are used to aid development, Components are standalone units that do specific things and interact with other components.
   - Also known in other languages as Packages, Namespaces.
-  - In Modules you hide information, while in libraries you call the librar.
+  - In Modules you hide information, while in libraries you call the library.
+  - A module can be seen as a boundary, as in Bounded Context.
 Open-Host Service: defines a protocol that gives access to the system in question as a set of services and opens it so that all who need to integrate with it can use it.
 Partnership: relationship where two or more bounded contexts collaborate and share information.
   - the teams in the two BCs will succeed or fail together.
@@ -61,5 +64,6 @@ Supporting Subdomain: model some aspect of the business that is essential yet no
 System: intercommunicating software components that aim to solve a problem or part of it.
 Ubiquitous Language: describe the Model inside a Bounded Context with terms and concepts of the business domain, where there should be no ambiguity.
   - Each Ubiquitous Language describes a Model. And Language is Model.
-  - There is one Ubiquitous Language per Bounded Context
+  - There is one Ubiquitous Language per Bounded Context.
+  - A Language consists of Terminology, Definitions, Meanings.
 Value Object: immutable object that represents a specific value with no identity.
