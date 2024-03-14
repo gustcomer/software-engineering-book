@@ -12,6 +12,8 @@ Aggregates: cluster of domain objects that form a consistency boundary and are t
 Anti-Corruption Layer: ACL, prevent the intrusion of foreign concepts and models into the domain model.
   - they are a dictionary of certain linguistic terms.
   - they can be thought as a Model to Model transformation.
+  - ACL is not about decoupling, it's about loose coupling, because you stil have to maintain the layer.
+  - ACL is implemented usually on the Adapter level
 Assessment View: the classical DDD Diagram of Domain with its Core Domain, Subdomains and Bounded Contexts.
 Big Ball of Mud: architecture that lacks any modular design or structure, and thus becomes a mass of disorganized code.
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
@@ -21,6 +23,9 @@ Bounded Context: boundary for a model expressed in a consistent (ubiquitous) lan
   - A Bounded Context can be represented by a Software System.
 Components: units of deployment that do specific things and interact with other components.
 Conformist: the upstream team has no motivation to provide for the downstream team's need.
+  - the Conformists slavishly adheres to the upstream Model.
+  - the team implementing a Conformist is always Downstream.
+  - the coupling of the conformist goes into the core of your domain model.
 Context: set of conditions that, if satisfied, make the Model be logically consistent, without contradictory or overlapping definitions.
 Context Map: depicts the communication patterns between Bounded Contexts with a collection of patterns.
 Core Domain: parts of the model distinctive and central to the purposes of the intended application.
@@ -38,6 +43,7 @@ Domain Model: software model of the very specific business domain you are workin
   - Each Bounded Bounded context has a Domain Model at its core.
   - A Bounded Context is a conceptual boundary where a domain model is applicable.
   - The Domain Model expresses a Ubiquitous Language as a software model.
+Downstream: the Downstream will be influenced by the Upstream context and it will have no influence on the Upstream.
 Service[Domain Service]: stateless operation that fulfills a domain-specific task.
 Entity: representation of an object in the Domain defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
@@ -60,6 +66,9 @@ Problem Space: encompasses the problems a business must solve represented throug
 Published Language: shared domain model in the form of a language definition.
 Service: stateless operation in the domain that fulfills a domain-specific task.
 Shared Kernel: special type of Bounded Context that contains code and data shared across multiple bounded contexts within the same domain.
+  - it has an even stronger coupling than the Conformist.
+  - it has physically shared artifact between two teams/contexts.
+  - requires a high amount of coordination between the involved teams.
 Solution Space: encompasses the model used to represent the problem and what software to build.
   - The Bounded Context is part of the Solution Space.
 Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages, the relationships between teams and what software to Build.
@@ -72,4 +81,5 @@ Ubiquitous Language: describe the Model inside a Bounded Context with terms and 
   - Each Ubiquitous Language describes a Model. And Language is Model.
   - There is one Ubiquitous Language per Bounded Context.
   - A Language consists of Terminology, Definitions, Meanings.
+Upstream: a conformist context will influence the Downstream counterpart while the opposite might not be true.
 Value Object: immutable object that represents a specific value with no identity.
