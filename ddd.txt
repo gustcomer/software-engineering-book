@@ -62,6 +62,7 @@ Open-Host Service: defines a protocol that gives access to the system in questio
   - the Downstream team can implement an Anti-Corruption Layer.
 Partnership: relationship where two or more bounded contexts collaborate and share information.
   - the teams in the two BCs will succeed or fail together.
+  - this pattern is recommended for teams that have a Shared Kernel.
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
 Published Language: shared domain model in the form of a language definition.
 Service: stateless operation in the domain that fulfills a domain-specific task.
