@@ -69,6 +69,8 @@ Shared Kernel: special type of Bounded Context that contains code and data share
   - it has an even stronger coupling than the Conformist.
   - it has physically shared artifact between two teams/contexts.
   - requires a high amount of coordination between the involved teams.
+  - avoid SK when building microservices.
+  - SK can evolve to Partnership.
 Solution Space: encompasses the model used to represent the problem and what software to build.
   - The Bounded Context is part of the Solution Space.
 Strategic Design: relates to understanding the Problem Space; where it achieves competitive advantages, the relationships between teams and what software to Build.
