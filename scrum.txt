@@ -12,6 +12,8 @@ Backlog Item: items that are stored on a product backlog that could add value to
 Daily Scrum: 15-minute event for the Developers of the Scrum Team inspect progress toward the Sprint Goal and adapt the Sprint.
 Definition of Done: formal description of the state of the Increment when it meets the quality measures required for the product.
 Planned Releases: collaborative process where the Scrum team and stakeholders determine which product backlog items will be included in upcoming releases.
+Product: a vehicle to deliver value that has a clear boundary, known stakeholders, well-defined users or customers.
+  - a product could be a service, a physical product, or something more abstract.
 Product Backlog: ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team.
   - the PB contains a commitment with the Product Goal.
 Product Goal: future state of the product which can serve as a target for the Scrum Team to plan against.
