@@ -8,7 +8,7 @@ Questions
 ================================================================================
 Glossary
 
-Aggregates: cluster of domain objects that form a consistency boundary and are treated as a single unit.
+Aggregates: cluster of domain objects that form a consistency boundary and are treated as a single unit for Data changes.
 Anti-Corruption Layer: ACL, prevent the intrusion of foreign concepts and models into the domain model.
   - they are a dictionary of certain linguistic terms.
   - they can be thought as a Model to Model transformation.
@@ -46,10 +46,12 @@ Domain Model: software model of the very specific business domain you are workin
   - Each Bounded Bounded context has a Domain Model at its core.
   - A Bounded Context is a conceptual boundary where a domain model is applicable.
   - The Domain Model expresses a Ubiquitous Language as a software model.
+Domain Service: stateless service that encapsulates domain-specific operations that don't naturally fit within the boundaries of an Entity or a Value Object.
+  - they are different from Application Services or Infrastructure Services.
 Downstream: the Downstream will be influenced by the Upstream context and it will have no influence on the Upstream.
 Entity: representation of an object in the Domain defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
-Invariants: set of rules or conditions that must always hold true throughout the lifecycle of a domain object to ensure the object's consistency and validity
+Invariant: business rule or condition that must always hold true throughout the lifecycle of a domain object to ensure the object's consistency and validity
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
   - A Model contains Business Rules, Decisions, Policies.
   - There is one Model per Bounded Context, and hence one Uniquitous Language.
@@ -69,7 +71,6 @@ Partnership: relationship where two or more bounded contexts collaborate and sha
 Problem Space: encompasses the problems a business must solve represented through the Domains and Subdomains.
 Published Language: shared domain model in the form of a language definition.
 Separate Ways: you don't integrate contexts at all, and use manual processes.
-Service[Domain Service]: stateless operation that fulfills a domain-specific task.
 Shared Kernel: special type of Bounded Context that contains code and data shared across multiple bounded contexts within the same domain.
   - it has an even stronger coupling than the Conformist.
   - it has physically shared artifact between two teams/contexts.
@@ -84,6 +85,8 @@ Strategic Design: relates to understanding the Problem Space; where it achieves 
 Subdomain: specific area within the overall domain.
 Supporting Subdomain: model some aspect of the business that is essential yet not Core
 System: intercommunicating software components that aim to solve a problem or part of it.
+Transaction: series of operations that are treated as a single unit of work and ensure data integrity in the Application and Domain Layers.
+  - transaction in DDD extends beyond the database-level transactions.
 Ubiquitous Language: describe the Model inside a Bounded Context with terms and concepts of the business domain, where there should be no ambiguity.
   - Each Ubiquitous Language describes a Model. And Language is Model.
   - There is one Ubiquitous Language per Bounded Context.
