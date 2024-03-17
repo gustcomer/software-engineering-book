@@ -22,6 +22,7 @@ Product Increment: whatever you previously built, plus anything new you just fin
 Product Owner: accountable for maximizing the value of the product resulting from the work of the Scrum Team.
   - the PO is accountable for effective Product Backlog management.
 Product Release: delivery of one or more Product Increments after one or more Sprints.
+Release: check Product Release.
 Scrum: lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems.
 Scrum Artifacts: Product Backlog, Spring Backlog, Increment.
 Scrum Events: Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective.
