@@ -16,6 +16,7 @@ Anti-Corruption Layer: ACL, prevent the intrusion of foreign concepts and models
   - ACL is implemented usually on the Adapter level
 Assessment View: the classical DDD Diagram of Domain with its Core Domain, Subdomains and Bounded Contexts.
 Big Ball of Mud: architecture that lacks any modular design or structure, and thus becomes a mass of disorganized code.
+  - normalmente você precisa usar ACLs contra BBoMs.
 Bounded Context: part of the software where particular definitions, rules and terms apply consistently.
 Bounded Context: boundary for a model expressed in a consistent (ubiquitous) language tailored around a specific purpose.
   - Each Bounded Context has a Ubiquitous Language.
@@ -48,6 +49,7 @@ Domain Model: software model of the very specific business domain you are workin
 Downstream: the Downstream will be influenced by the Upstream context and it will have no influence on the Upstream.
 Entity: representation of an object in the Domain defined primarily by its identity.
 Generic Subdomain: captures nothing special to the business, yet it is required.
+Invariants: set of rules or conditions that must always hold true throughout the lifecycle of a domain object to ensure the object's consistency and validity
 Model: simplification of reality that abstracts the aspects relevant to solving the problem at hand and ignore extraneous details.
   - A Model contains Business Rules, Decisions, Policies.
   - There is one Model per Bounded Context, and hence one Uniquitous Language.
