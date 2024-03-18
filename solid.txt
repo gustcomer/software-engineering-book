@@ -22,6 +22,8 @@ tree.
 - Or yet: partitioning the system into components, and arranging those
 components into a dependency hierarchy that protects higher-level components
 from changes in lower-level components.
+- In other words, you take a behavior that varies a lot, put it behind a
+contract and create an extension point.
 
 ### Liskov Substitution Principle (LSP)
 
