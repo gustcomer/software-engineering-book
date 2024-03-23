@@ -1,8 +1,30 @@
 ### Arrange-Act-Assert
 
+Also known as: Given, Then, When.
+
 The AAA (Arrange-Act-Assert) test pattern states that you can divide your test
 in three stages:
 
 1. Setup the environment you're going to test.
 2. Perform actions your software would usually do and you're willing to test.
 3. Make sure the results obtained and states of the variables are correct.
+
+# F.I.R.S.T. principles
+
+Fast
+  - they should be fast so that developers do not hesitate to run them.
+
+Independent/Isolated
+  - you run your tests in any order you want.
+  - when one test breaks, it doesn't affect the others.
+
+Repeatable
+  - always return the same result, independently of external factors.
+
+Self-validating
+  - quality assertions that assure the desired behavior is satisfied.
+
+Throrough
+  - good coverage.
+
+Timely?
