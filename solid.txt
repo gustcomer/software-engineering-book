@@ -34,9 +34,17 @@ the behavior of the subclass. Only worring with the superclass behavior.
 - As a classic example, a Rectangle interface should not have a Square subclass.
 For this to work, we would have to put ifs in the context using the Square class
 and it would be a disaster.
-- We would have to manually assure the Invariant condition between Height and
-Width (in a square they should be equal).
 - In other words, your class hierarchy must make sense and be coherent.
+- requirements that every derived class should adhere to while inheriting from a
+base class.
+  Signature Requirements
+  - Contravariance of method arguments in the subtype.
+  - Covariance of return types in the subtype.
+  - No new exceptions.
+  Behavioral Requirements
+  - Invariants of the supertype must be preserved in a subtype.
+  - Preconditions cannot be strengthened in a subtype.
+  - Postconditions cannot be weakened in a subtype
 
 ### Interface Segregation Principle (ISP)
   - Don't depend on methods/behaviours that you don't need.
