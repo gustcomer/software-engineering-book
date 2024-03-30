@@ -1,0 +1,15 @@
+Dynamic Binding: run-time association of a request to an object and one of its operations.
+  - issuing a request doesn't commit you to a particular implementation until run-time.
+  - polymorphism is only possible due to dynamic binding
+Interface: characterizes the complete set of requests that can be sent to the object.
+  - complete set of requests that can be sent to the object.
+  - Objects are known only through their interfaces.
+  - an Object interface says nothing about its Implementation.
+Mixin Class: class that contains methods for use by other classes without having to be the parent class of those other classes.
+  - aka mix-in. like some ingredient you add to your milk-shake.
+Subclasses: a class that inherited from other class
+  - different from subtypes.
+Subtype: a type is a subtype of another if its interface contains the interface of its supertype.
+  - a class that inherits from an interface probably can be treated as a subtype.
+  - the subtype inherits the interface of its supertype.
+  - sometimes subtypes, subclasses, are used synonymously. For Lyskov everything is type.
