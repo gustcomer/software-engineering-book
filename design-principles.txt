@@ -3,3 +3,4 @@ Program to an interface, not an implementation.
   Don't declare variables to be instances of particular concrete classes.
   Instead, commit only to an interface defined by an abstract class.
 
+Favor object composition over class inheritance.
