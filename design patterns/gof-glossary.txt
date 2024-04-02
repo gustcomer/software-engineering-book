@@ -1,0 +1,138 @@
+Abstract Class: one whose main purpose is to define a common interface for its subclasses.
+  - an AC will defer some or all of its implementation to operations defined in subclasses.
+  - they cannot be instantiated.
+  - usually they provide little or no imlementation.
+Abstract Operations: operations that an Abstract Class declares but doesn't implement.
+Abstraction
+  - higher level of abstraction
+Acquaintance: type of relationship in which an object merely knows of another object.
+  - acquainted objects may request operations of each other, but they aren't responsible for each other.
+  - it suggest weaker coupling than aggregation.
+  - aka association, or "using"
+Aggregation: type of relationship in which one object owns or is responsible for another object.
+  - we say that one object has another or that is part of another
+Analysis Model
+Application Program: major class of software.
+Architectures
+Behavioral: characterize ways in which classes or objects interact and distribute responsibility.
+Black-Box reuse: reuse functionality via Object Composition.
+  - no internal details of parent classes are visible.
+Class: specifies the object's internal data and representation and defines the operations the object can perform.
+  - an object's implementation is defined by its class.
+Class Inheritance: when a subclass inherits from a parent class.
+  - tool to reuse functionality.
+  - defines an object's implementation in terms of another object's implementation.
+  - a mechanism for extending an application's functionality by reusing functionality in parent classes.
+  - the child (or derived) class inherits all public and protected attributes and methods of the parent class, allowing it to reuse the parent class's functionality.
+  - it also has the ability to define interfaces and hence also favors polymorphism.
+  - defined statically at compile-time. you can't change the implementation inherited from parent-classes at run-time.
+  - class inheritance breaks encapsulation. The subclass becomes binded up with the implementation of its parent class. An alternative to that problem is Object Composition.
+Class Interfaces
+Collaboration:
+Concrete Class: classes that are not abstract
+Context
+Consequences: results and trade-off of applying the pattern.
+Creational: concern the process of object creation.
+  - Creational Patterns ensure that your system is written in terms of interfaces, not implementations.
+Decouple
+Delegation: way of making composition as powerful for reuse as inheritance.
+  - a Receiving Object delegates operations to its Delegate.
+  - usually the Receiving Object passes itself to the Delegate via this as parameter of some operation or Delegate constructor (in resume, with dependency injection).
+  Receiving Object: object that will receive operations and will delegate to some other objects that it references (has a).
+  Delegate: the object whom is delegated some operation and holds the implementation.
+  - delegation makes it easy to compose behaviors at run-time and to change the way they-re composed.
+  - false delegation simply forward operations to other objects. true delagation forward operations and passes along a reference to itself
+Dependency
+Design
+Design Patterns: descriptions of communicating objects and classes that are customized to solve a general design problem in a particular context;
+Dynamic Binding: run-time association of a request to an object and one of its operations.
+  - issuing a request doesn't commit you to a particular implementation until run-time.
+  - polymorphism is only possible due to dynamic binding
+Dynamically: in runtime.
+Encapsulation: when the internal state of the object can only be accessed operations. 
+  - the internal state is invisible from outside the object.
+Flexibility
+Flexible Design: system that reflects tomorrow's realities.
+Framework: set of cooperating classes that make up a reusable design for a specific class of software.
+  - the framework dictates the architecture of your application.
+  - frameworks always have a particular application domain.
+Granularity
+Implementation:
+Indirection: when the code that uses some interface doesn't need to know about the concrete implementation.
+  - check Levels of Indirection
+Inheritance Hierarchies
+Interface: set of all Operation Signatures of an object's operations.
+Interface: characterizes the complete set of requests that can be sent to the object.
+  - complete set of requests that can be sent to the object.
+  - Objects are known only through their interfaces.
+  - an Object interface says nothing about its Implementation.
+Interface Inheritance: when a class implements some interface.
+  - Inheriting an interface doesn't provide method implementations (as with class inheritance) but rather specifies a set of methods that implementing classes must provide.
+  - describes when an object can be used in place of another.
+  - contrast with Class Inheritance.
+  - aka Subtyping
+Levels of Indirection: number of intermediary steps or layers between two entities or pieces of data.
+Message: send a message to an object is the same thing as call a method
+Mixin Class: class that contains methods for use by other classes without having to be the parent class of those other classes.
+  - aka mix-in. like some ingredient you add to your milk-shake.
+Object: packages both data and the procedures that operate on that data.
+  - an object performs an operation when it receives a request (or method) from a client.
+  - objects are created by instantiating a class. The object is said to be an instance of the class.
+  - instantiating a class allocates storage for the object's internal data (instance variables) and associates the operations with these data.
+Object Composition: defined dynamically at run-time through objects acquiring references to other objects through interfaces.
+  - assemble (compose) with well-defined interfaces to get more complex functionality.
+  - it is an alternative to class inheritance.
+  - we access objects through their interfaces and hence we don't break encapsulation.
+Object-Oriented Design: decompose a system into objects.
+Operation:
+  Operation Signature: specifies operation's name, objects it takes as parameters, operation's return value.
+Overriding: when a subclass redefine behaviors of theis parent classes.
+Parameterized Types: lets you define a type without specifying all the other types it uses.
+  - aka Generics, Templates, etc.
+  - it's only useful in languages that have compile-time type checking.
+Pattern Template: a template that can be applied in many different situations.
+  Also Known As:
+  Applicability: situations in which the design pattern can be applied.
+  Classification
+  Collaborations: how the participants collaborate to carry out their responsibilities.
+  Consequences: what are the trade-offs.
+  Implementation: pitfalls, hints, techniques when implementing
+  Intent: A short statement that answers the following questions: What does the design pattern do.
+  Known Uses: examples of usage of the pattern.
+  Motivation: a scenario that illustrates a design problem.
+  Name: conveys the essence of the pattern succintly
+  Participants: classes and/or objects participating in the design pattern and their responsibilities.
+  Related Patterns
+  Sample Code
+  Structure: class diagram and interaction diagram.
+Polymorphism: lets you substitute objects that jave identical interfaces for each other at run-time.
+  - it is only possible due to dynamic binding.
+Problem:
+Procedures: aka methods or operations.
+Purpose: classification criterion that results in Creational, Structural and Behavioral division.
+Relationship:
+Request: simply a method call on an object.
+  - an object performs an operation when it receives a request (or message) from a client.
+  - check Message.
+Responsibilities
+Reusable
+  - reusable design
+  - the goal of design patterns is a reusable object-oriented design.
+Roles
+Solution: elements that make up the design
+Statically: in compile time
+Structural: deals with the composition of classes and objects.
+Subclasses: a class that inherited from other class
+  - different from subtypes.
+Subscribe/Notify Protocol
+Subtype: a type is a subtype of another if its interface contains the interface of its supertype.
+  - a class that inherits from an interface probably can be treated as a subtype.
+  - the subtype inherits the interface of its supertype.
+  - sometimes subtypes, subclasses, are used synonymously. For Lyskov everything is type.
+Supertype
+Toolkit: set of related and reusable classes designed to provide useful, general-purpose functionality
+Trade-offs: time, space
+Type: name used to denote a particular interface of an object.
+  - check subtype
+White-Box reuse: reuse functionality via class inheritance.
+  - internals of parent classes are often visible.
