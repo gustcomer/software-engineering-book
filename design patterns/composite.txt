@@ -1,0 +1,46 @@
+INTENT
+Compose objects into tree structures to represent part-whole hierarchies. Composite
+lets clients treat individual objects and compositions of objects uniformly.
+
+PARTICIPANTS
+Client, Component, Composite, Leaf
+
+THE PATTERN
+Each element in the tree structure is either a Leaf or a Composite. But both of
+these elements implement the same Composite interface. The interface have tree
+related methods such as add(Component), remove(Component) and getChild(int) or
+getChildren(Component[]).
+
+INSIGHTS
+
+- To be a Composite candidate, usually the problem will have
+  > a tree structure.
+  > a Leaf with some property that could make sense and be calculated to 
+  Composites.
+  > a Composite node performs calculations similar to those of a Leaf node;
+  however, it iterates through its children to carry out these operations.
+
+USE CASES
+
+Financial Portfolio Hierarchy: Financial application designed to manage 
+investments. In this case, investments could be individual stocks, bonds, or
+composite entities like mutual funds, ETFs (Exchange-Traded Funds), or entire
+portfolios containing multiple types of investments. We need to treat all these
+entities uniformly, enabling operations like calculating the total value,
+assessing risk, or generating reports to be performed on both individual
+investments and groups of investments alike.
+
+Computer Aided Design: geometric shapes can be composed into more complex
+structures.
+
+================================================================================
+GLOSSARY
+
+add(Component)
+Client
+Component
+Composite
+getChild(int)
+getChildren(Component[])
+Leaf
+remove(Component)

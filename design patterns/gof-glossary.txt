@@ -110,6 +110,7 @@ Polymorphism: lets you substitute objects that jave identical interfaces for eac
 Problem:
 Procedures: aka methods or operations.
 Purpose: classification criterion that results in Creational, Structural and Behavioral division.
+Recursive Compostition
 Relationship:
 Request: simply a method call on an object.
   - an object performs an operation when it receives a request (or message) from a client.
