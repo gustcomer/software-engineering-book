@@ -19,6 +19,9 @@ INSIGHTS
   Composites.
   > a Composite node performs calculations similar to those of a Leaf node;
   however, it iterates through its children to carry out these operations.
+- Composite Pattern is not only about some Tree Data Structure. It's about
+being able to treat Composites as a single node and perform calculations on it
+the same way you would perform it on a Leaf.
 
 USE CASES
 
@@ -38,9 +41,9 @@ GLOSSARY
 
 add(Component)
 Client
-Component
-Composite
+Component: Interface for all objects in the composition, may implement default behavior or declare behavioral methods.
+Composite: An object that has children. It stores component and implements component methods including child-related operations.
 getChild(int)
 getChildren(Component[])
-Leaf
+Leaf: Represents leaf objects in the composition; has no children.
 remove(Component)
