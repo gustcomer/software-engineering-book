@@ -1,0 +1,17 @@
+  - C++ is a compiled language.
+
+================================================================================
+Concepts
+
+compiler: processes source files with text and produce object files.
+Core language features: eg built-in types, loops.
+  - check 
+executable file: output of a linker.
+linker: combine object files and yield an executable program.
+program:
+  - a C++ program typically consists of many source code files.
+source files: contain source code.
+Standard-library components: eg Containers (vector, map), I/O operations (<<), etc
+
+================================================================================
+Keywords
