@@ -1,0 +1,18 @@
+
+- communication over insecure channel problem
+  Alice (A) needs to communicate with Bob (B) through a Channel, but Oscar is
+  the Opponent trying to read the message wiretapping.
+
+################################################################################
+Glossary
+
+Asymmetric Cryptograpy:
+  aka public key cryptography
+Channels: transmission media like internet, GSM airwaves, WIFI
+Cryptoanalysis: try to attack
+Cryptography: try to defend
+  - subdivides in Symmetric Algorithms, Asymmetric algorithms and protocols.
+Cryptology: science consisting of Cryptography and Cryptoanalysis.
+Open Channel: everybody can see
+Protocols: study cryptography protocols.
+Symmetric Algorithm
