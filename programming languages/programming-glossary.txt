@@ -12,3 +12,15 @@ GLOSSARY
 4th-generation programming language: 4GL, 
   - Octave, LabVIEW, SQL, Stata, Wolfram Language
 5th-generation programming language: 5GL, based on problem-solving using constraints given to the program, rather than using an algorithm written by a programmer.
+Abstraction: involves hiding the complex reality while exposing only the necessary parts of an object through some interfaces.
+  - it can be achieved through interfaces or abstract classes that define what can be done without specifying how it should be done.
+  - both Abstraction and Encapsulation promote data hiding.
+Encapsulation: bundle the data and methods that operate on the data into a single class, then restrict the access to these properties with access modifiers.
+  - protect the object’s internal state from unintended or harmful modifications
+  - it also has the benefit of hiding the data.
+  - it may be a bit painful to add setters and getters everywhere.
+  - Encapsulation can be mistaken for Abstraction because both promote data hiding.
+Inheritance: allows one class to gain the properties (data members and methods) of another class.
+  - note that in case of abstract classes, Inheritance allows Abstraction
+Polymorphism: a single interface can be used to allow objects of different classes to be treated as objects of a common superclass.
+  - note that Abstraction allows Polymorphism.
