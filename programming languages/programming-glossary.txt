@@ -1,0 +1,14 @@
+================================================================================
+GLOSSARY
+
+1st-generation programming language: 1GL, machine level languages used to program first-generation computers.
+  - the instructions in 1GL are made of binary numbers, represented by 1s and 0s.
+2nd-generation programming language: 2GL, way to categorize assembly languages.
+3rd-generation programming language: 3GL,
+  - eg: ALGOL, BASIC, C, COBOL, Fortran, Pascal.
+  - includes C++, C#, Java, JavaScript.
+  - includes even some advanced 3GLs like Python, Ruby, and Perl
+  - algorithmic or procedural languages.
+4th-generation programming language: 4GL, 
+  - Octave, LabVIEW, SQL, Stata, Wolfram Language
+5th-generation programming language: 5GL, based on problem-solving using constraints given to the program, rather than using an algorithm written by a programmer.
