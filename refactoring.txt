@@ -1,0 +1,22 @@
+################################################################################
+CODE SMELLS
+
+Shotgun Surgery: every time you make a change, you have to make a lot of little edits to a lot of different classes.
+Solution Sprawl[K]: When code and/or data used to perform a responsibility becomes sprawled across numerous classes.
+  - similar to Shotgun Surgery but in Solution Sprawl you sense it by observing while in Shotgun Surgery you sense it by doing.
+  - related: Move Creation Knowledge to Factory
+
+
+################################################################################
+REFACTORINGS - Fowler and Beck
+
+
+################################################################################
+REFACTORINGS - Joshua Kerievsky
+
+Replace Constructors with Creation Methods
+
+################################################################################
+GLOSSARY
+
+responsibility
