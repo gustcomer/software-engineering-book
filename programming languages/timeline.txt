@@ -1,0 +1,48 @@
+1949  Assembly
+1957  FORTRAN
+1958  ALGOL
+1958  LISP
+1959  COBOL
+1962  Simula
+1964  BASIC
+1970  PASCAL
+1972  Smalltalk
+1972  C
+1972  SQL
+1977  Bourne Shell
+1978  MATLAB
+1980  ADA
+1983  C++
+1983  Objective C
+1984  CLIPPER
+1986  Eiffel
+1986  LabVIEW
+1986  Erland
+1987  Perl
+1988  Octave
+1988  Mathematica
+1989  Bash
+1990  Haskell
+1991  Visual Basic
+1991  Python
+1993  Ruby
+1993  Lua
+1993  R
+1995  Java
+1995  JavaScript
+1995  PHP
+1995  Delphi
+1997  ECMAScript
+1998  Standard C++
+2000  C#
+2003  Scala
+2005  F#
+2007  Clojure
+2009  Go
+2010  Rust
+2011  Kotlin
+2012  Elixir
+2012  Typescript
+2012  Julia
+2014  Swift
+2022  Carbon
