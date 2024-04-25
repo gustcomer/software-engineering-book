@@ -1,0 +1,30 @@
+INTENT
+Define a family of algorithms, encapsulate each one, and make them
+interchangeable. Strategy lets the algorithm vary independently from clients
+that use it.
+
+ALSO KNOWN AS
+Policy Pattern
+
+PARTICIPANTS
+Context, Strategy, ConcreteStrategyX, Client
+
+CLASSIFICATION
+
+
+THE PATTERN
+
+
+================================================================================
+GLOSSARY
+
+Algorithm: sequence of steps or a set of rules designed to solve a specific problem or accomplish a task.
+  - "Algorithm" suggests a broader concept than methods or functions that can be implemented in various ways, allowing for greater flexibility and interchangeability of the strategies used.
+  - when you have many different ways to perform a task, you can call it an Algorithm.
+  - objects that represent a process or algorithm don't occur in nature.
+Client: even though not specified directly in this pattern, may call the strategy in some Context, not necessarily a class with this name.
+Context: place of the code where you dynamically set the behavior by changing the actual strategy.
+  - the context represents some situation in which the Client may find himself.
+
+ConcreteStrategyX
+Strategy
