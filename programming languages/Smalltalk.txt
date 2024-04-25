@@ -1,0 +1,16 @@
+  - purely object oriented programming language (OOP).
+  - the objects can be modified while the system is running.
+
+================================================================================
+Concepts
+
+class: they are also objects. Each class is an instance of the metaclass of that class.
+code blocks: way of expressing anonymous functions. they are also objects.
+message: objects can receive a message from itself or other objects.
+  - it's like a method call.
+metaclasses: also objects, and are all instances of a class named Metaclass.
+object: instances of corresponding classes, and operations on them are invoked by sending messages.
+Reflection: term that computer scientists apply to software programs that have the ability to inspect their own structure.
+
+================================================================================
+Keywords
