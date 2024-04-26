@@ -1,7 +1,5 @@
 INTENT
-Define a family of algorithms, encapsulate each one, and make them
-interchangeable. Strategy lets the algorithm vary independently from clients
-that use it.
+Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
 
 ALSO KNOWN AS
 Policy Pattern
@@ -10,9 +8,29 @@ PARTICIPANTS
 Context, Strategy, ConcreteStrategyX, Client
 
 CLASSIFICATION
+It's Behavioral because the Context distribute responsibilities to other objects.
+It has Object scope because we are changing object behavior dynamically.
+It's a Behavioral Object pattern because describe how the Context and the Strategy objects cooperate to perform a task that could not be carried out alone.
 
+IMPLEMENTATION
+The Client instantiate a ConcreteStrategy and set it to the Context propriety of the type Strategy via dependency injection. This setup is dynamic and the Context may also represent any part of the program.
 
-THE PATTERN
+INSIGHTS
+- ise it when many related classes differ only in their behavior (methods?).
+- if the Strategy pattern were not used, the alternatives would be:
+    - use multiple conditional statements.
+    - to put the behavior in a superclass and explode the subclasses
+    - use interface for the behavior would result in duplicated code.
+- we leverage reuse through the inheritance of the Strategy subclasses.
+- favor composition over inheritance is a way to change behavior of the object dynamically.
+- compatible with the open/closed principle (OCP), which proposes that classes should be open for extension but closed for modification.
+  - it helps OCP by creating extension points.
+- it's a way of implementing Dependency Inversion Principle.
+- the definition refers to Algorithms while the in other parts it is mentioned Behavior. Algorithms would be different ways to do the same thing, while Behavior would be do different but similar things.
+- using this definition of Behavior, i think the intent should be modified to add behavior and algorithms.
+
+COLLABORATIONS.
+- decorator lets you change the skin of an object while strategy lets you change the guts.
 
 
 ================================================================================
@@ -22,6 +40,7 @@ Algorithm: sequence of steps or a set of rules designed to solve a specific prob
   - "Algorithm" suggests a broader concept than methods or functions that can be implemented in various ways, allowing for greater flexibility and interchangeability of the strategies used.
   - when you have many different ways to perform a task, you can call it an Algorithm.
   - objects that represent a process or algorithm don't occur in nature.
+Behavior: Behavior would be do different but similar things while Algorithms would be different ways to do the same thing
 Client: even though not specified directly in this pattern, may call the strategy in some Context, not necessarily a class with this name.
 Context: place of the code where you dynamically set the behavior by changing the actual strategy.
   - the context represents some situation in which the Client may find himself.
