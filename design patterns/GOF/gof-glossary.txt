@@ -11,10 +11,14 @@ Acquaintance: type of relationship in which an object merely knows of another ob
   - aka association, or "using"
 Aggregation: type of relationship in which one object owns or is responsible for another object.
   - we say that one object has another or that is part of another
+Algorithm: sequence of steps or a set of rules designed to solve a specific problem or accomplish a task.
+  - "Algorithm" suggests a broader concept than methods or functions that can be implemented in various ways, allowing for greater flexibility and interchangeability of the strategies used.
+  - when you have many different ways to perform a task, you can call it an Algorithm.
+  - objects that represent a process or algorithm don't occur in nature.
 Analysis Model
 Application Program: major class of software.
 Architectures
-Behavioral: characterize ways in which classes or objects interact and distribute responsibility.
+Behavioral Patterns: characterize ways in which classes or objects interact and distribute responsibility.
 Black-Box reuse: reuse functionality via Object Composition.
   - no internal details of parent classes are visible.
 Class: specifies the object's internal data and representation and defines the operations the object can perform.
@@ -28,11 +32,13 @@ Class Inheritance: when a subclass inherits from a parent class.
   - defined statically at compile-time. you can't change the implementation inherited from parent-classes at run-time.
   - class inheritance breaks encapsulation. The subclass becomes binded up with the implementation of its parent class. An alternative to that problem is Object Composition.
 Class Interfaces
+Class Patterns: deal with relationships between classes and their subclasses, usually through inheritance, and hence static/fixed at compile-time.
+  - classification based in Scope.
 Collaboration:
 Concrete Class: classes that are not abstract
 Context
 Consequences: results and trade-off of applying the pattern.
-Creational: concern the process of object creation.
+Creational Patterns: concern the process of object creation.
   - Creational Patterns ensure that your system is written in terms of interfaces, not implementations.
 Decouple
 Delegation: way of making composition as powerful for reuse as inheritance.
@@ -84,6 +90,8 @@ Object Composition: defined dynamically at run-time through objects acquiring re
   - it is an alternative to class inheritance.
   - we access objects through their interfaces and hence we don't break encapsulation.
 Object-Oriented Design: decompose a system into objects.
+Object Pattern: deal with object relationships which dynamic/can be changed at run-time.
+  - classification based in Scope.
 Operation:
   Operation Signature: specifies operation's name, objects it takes as parameters, operation's return value.
 Overriding: when a subclass redefine behaviors of theis parent classes.
@@ -109,7 +117,9 @@ Polymorphism: lets you substitute objects that jave identical interfaces for eac
   - it is only possible due to dynamic binding.
 Problem:
 Procedures: aka methods or operations.
+Process
 Purpose: classification criterion that results in Creational, Structural and Behavioral division.
+  - the other less know classification criterion is Scope.
 Recursive Compostition
 Relationship:
 Request: simply a method call on an object.
@@ -120,20 +130,22 @@ Reusable
   - reusable design
   - the goal of design patterns is a reusable object-oriented design.
 Roles
+Scope: classification criterion that specifies whether the pattern applies primarily to classes or to objects.
+  - check Class Patterns and Object Patterns.
 Solution: elements that make up the design
 Statically: in compile time
-Structural: deals with the composition of classes and objects.
-Subclasses: a class that inherited from other class
+Structural Patterns: deals with the composition of classes and objects.
+Subclasses: a class that inherited from other class.
   - different from subtypes.
-Subscribe/Notify Protocol
+Subscribe/Notify Protocol.
 Subtype: a type is a subtype of another if its interface contains the interface of its supertype.
   - a class that inherits from an interface probably can be treated as a subtype.
   - the subtype inherits the interface of its supertype.
   - sometimes subtypes, subclasses, are used synonymously. For Lyskov everything is type.
 Supertype
-Toolkit: set of related and reusable classes designed to provide useful, general-purpose functionality
-Trade-offs: time, space
+Toolkit: set of related and reusable classes designed to provide useful, general-purpose functionality.
+Trade-offs: time, space.
 Type: name used to denote a particular interface of an object.
-  - check subtype
+  - check subtype.
 White-Box reuse: reuse functionality via class inheritance.
   - internals of parent classes are often visible.

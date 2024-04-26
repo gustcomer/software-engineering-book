@@ -13,6 +13,7 @@ Cryptoanalysis: try to attack
 Cryptography: try to defend
   - subdivides in Symmetric Algorithms, Asymmetric algorithms and protocols.
 Cryptology: science consisting of Cryptography and Cryptoanalysis.
+Ciphertext: some text that nobody can understand.
 Open Channel: everybody can see
 Protocols: study cryptography protocols.
 Symmetric Algorithm

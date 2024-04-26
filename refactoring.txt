@@ -14,9 +14,13 @@ REFACTORINGS - Fowler and Beck
 ################################################################################
 REFACTORINGS - Joshua Kerievsky
 
-Replace Constructors with Creation Methods
+Move Creation Knowledge to Factory
+Replace Constructors with Creation Methods: if you have multiple constructors with different set of parameters, replace them with Creating Methods.
 
 ################################################################################
 GLOSSARY
 
+Creation Methods: static or nonstatic method on a class that instantiates new instances of the class.
+Factory Method: the same as Creation Method, but assure the loose coupling of the Factory.
 responsibility
+role

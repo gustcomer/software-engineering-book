@@ -24,3 +24,5 @@ Inheritance: allows one class to gain the properties (data members and methods) 
   - note that in case of abstract classes, Inheritance allows Abstraction
 Polymorphism: a single interface can be used to allow objects of different classes to be treated as objects of a common superclass.
   - note that Abstraction allows Polymorphism.
+"pure" Object-Oriented Programming Language: there is no difference between values which are objects and values which are primitive types.
+Reflection: term that computer scientists apply to software programs that have the ability to inspect their own structure.

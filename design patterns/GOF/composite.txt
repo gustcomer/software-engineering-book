@@ -5,7 +5,7 @@ lets clients treat individual objects and compositions of objects uniformly.
 PARTICIPANTS
 Client, Component, Composite, Leaf
 
-THE PATTERN
+IMPLEMENTATION
 Each element in the tree structure is either a Leaf or a Composite. But both of
 these elements implement the same Composite interface. The interface have tree
 related methods such as add(Component), remove(Component) and getChild(int) or
