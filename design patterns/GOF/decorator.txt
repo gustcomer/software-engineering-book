@@ -1,0 +1,45 @@
+INTENT
+Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+
+ALSO KNOWN AS
+Wrapper
+
+PARTICIPANTS
+Client, Component, ConcreteComponent, Decorator, ConcreteDecorator
+
+CLASSIFICATION
+It's Structural because it deals with the composition of Objects to form a more complex object.
+It has Object scope because it uses an object to implement the Component behavior and add functionality to an object dynamically.
+
+IMPLEMENTATION
+The Client instantiates a ConcreteComponent, which implements the Component interface, an inject it possibly in the constructor of the Concrete Decorator which implements the Decorator interface.
+The Decorator has the same interface of the Component and some aditional behavior.
+The Decorator Has A reference to a ConcreteComponent and use it to implement the behavior of the Component, while also adding behavior with its own implementation.
+
+INSIGHTS
+  - it helps OCP because it's a way of adding behavior without changing the object.
+  - it allows to add behavior at runtime without affecting other objects.
+  - it uses composition to extend object functionality, just like Strategy.
+  - Decorators keep the same interface of the Component, it uses the composed Component to implement them, it can be a problem with big interfaces.
+  - Decorators may or may not break LSP.
+  - adding Responsibilities to an object may break SRP, beware.
+  - if it adds behavior, shouldn't it be Behavioral?
+  - the implementation of the Component methods can be made using Reflection in the Decorator.
+
+COLLABORATIONS
+- other patterns can also be considered Wrappers, such as Adapter, Proxy, Decorator.
+- decorator lets you change the skin of an object while strategy lets you change the guts.
+
+USE CASES
+
+================================================================================
+GLOSSARY
+
+Behavior: is more broad than method.
+Client
+ConcreteComponent [wrappee]:
+  - implements the Component interface. The ConcreteDecorators will have one of these
+ConcreteDecorator: each ConcreteDecorator add some specific behaviors.
+Component: the Class whose objects we are adding behavior.
+Decorator: an interface with the same methods as the Component and some aditional behavior. Also it Has a Component.
+execute(), methodX(): original methods of the wrappee.
