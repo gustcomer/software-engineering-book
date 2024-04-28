@@ -25,10 +25,15 @@ INSIGHTS
   - adding Responsibilities to an object may break SRP, beware.
   - if it adds behavior, shouldn't it be Behavioral?
   - the implementation of the Component methods can be made using Reflection in the Decorator.
+  - can be used to eliminate conditional logic associated with special-cases just like the Strategy Pattern.
 
 COLLABORATIONS
 - other patterns can also be considered Wrappers, such as Adapter, Proxy, Decorator.
 - decorator lets you change the skin of an object while strategy lets you change the guts.
+- directly related to the refactoring Move Embellishment to Decorator.
+- you can easily share Strategy instances by means of the Singleton or Flyweight patterns. You can't share a Decorator instance.
+- with Decorators you must implement the entire interface of the Component, but the Component don't need to know that the Decorator exists. This is not true with Strategy.
+- it's easier to work with a lot of Strategies than a lot of Decorators.
 
 USE CASES
 
@@ -43,3 +48,4 @@ ConcreteDecorator: each ConcreteDecorator add some specific behaviors.
 Component: the Class whose objects we are adding behavior.
 Decorator: an interface with the same methods as the Component and some aditional behavior. Also it Has a Component.
 execute(), methodX(): original methods of the wrappee.
+Transparent Enclosure: way in which decorators wrap or enclose an object to add new behaviors without affecting the interface or the outward appearance of the object.

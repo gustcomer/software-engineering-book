@@ -18,7 +18,9 @@ Replace Nested Conditional with Guard Clauses: if the condition is an unusual co
 ################################################################################
 REFACTORINGS - Joshua Kerievsky
 
-Move Creation Knowledge to Factory
+Move Creation Knowledge to Factory.
+Move Embellishment to Decorator: separate code for special-case behavior that needs to be executed only some of the time in a Decorator.
+  - Competes with Replace Conditional Logic with Strategy
 Replace Conditional Logic with Strategy: if you have conditional logic with several variants of a calculation, create a Strategy for each variant and make the method delegate the calculation to a Strategy instance.
 Replace Constructors with Creation Methods: if you have multiple constructors with different set of parameters, replace them with Creating Methods.
 

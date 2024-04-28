@@ -145,6 +145,7 @@ Subtype: a type is a subtype of another if its interface contains the interface 
 Supertype
 Toolkit: set of related and reusable classes designed to provide useful, general-purpose functionality.
 Trade-offs: time, space.
+Transparent Enclosure: way in which decorators wrap or enclose an object to add new behaviors without affecting the interface or the outward appearance of the object.
 Type: name used to denote a particular interface of an object.
   - check subtype.
 White-Box reuse: reuse functionality via class inheritance.
