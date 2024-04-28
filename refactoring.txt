@@ -13,11 +13,13 @@ Solution Sprawl[K]: When code and/or data used to perform a responsibility becom
 ################################################################################
 REFACTORINGS - Fowler and Beck
 
-Replace Nested Conditional with Guard Clauses: if the condition is an unusual condition, I check the condition early and return if it's true.
+Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
+Inline Function [Inline Method]: the inverse of Extract Function.
 
 ################################################################################
 REFACTORINGS - Joshua Kerievsky
 
+Compose Method: apply Extract Function several times until all of the methods called within the original method are more understandable and at the same level of detail.
 Move Creation Knowledge to Factory.
 Move Embellishment to Decorator: separate code for special-case behavior that needs to be executed only some of the time in a Decorator.
   - Competes with Replace Conditional Logic with Strategy
@@ -26,6 +28,8 @@ Replace Constructors with Creation Methods: if you have multiple constructors wi
 
 ################################################################################
 REFACTORINGS - Tidy First - Beck
+
+Replace Nested Conditional with Guard Clauses: if the condition is an unusual condition, I check the condition early and return if it's true.
 
 ################################################################################
 GLOSSARY
