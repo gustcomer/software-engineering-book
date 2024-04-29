@@ -23,6 +23,7 @@ Compose Method: apply Extract Function several times until all of the methods ca
 Move Creation Knowledge to Factory.
 Move Embellishment to Decorator: separate code for special-case behavior that needs to be executed only some of the time in a Decorator.
   - Competes with Replace Conditional Logic with Strategy
+Replace Conditional Dispatcher with Command: 
 Replace Conditional Logic with Strategy: if you have conditional logic with several variants of a calculation, create a Strategy for each variant and make the method delegate the calculation to a Strategy instance.
 Replace Constructors with Creation Methods: if you have multiple constructors with different set of parameters, replace them with Creating Methods.
 
@@ -34,6 +35,7 @@ Replace Nested Conditional with Guard Clauses: if the condition is an unusual co
 ################################################################################
 GLOSSARY
 
+Conditional Dispatcher: conditional statement (such as a switch) that performs request routing and handling.
 Conditional Logic: several ifs and elses, or a big switch.
 Creation Methods: static or nonstatic method on a class that instantiates new instances of the class.
 Factory Method: the same as Creation Method, but assure the loose coupling of the Factory.

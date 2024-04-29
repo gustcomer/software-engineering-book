@@ -1,0 +1,45 @@
+INTENT
+Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+
+ALSO KNOWN AS
+Action Pattern, Transaction Pattern
+
+PARTICIPANTS
+Client, Command, ConcreteCommand, Receiver, Invoker
+
+CLASSIFICATION
+It is Behavioral because it deals mainly with communication between objects.
+It combines objects like Command, Receiver and Invoker to cooperate and perform tasks that could not be carried out alone like queueing commands, undo, etc.
+
+IMPLEMENTATION
+The Client instantiates a Receiver, an Invoker and some ConcreteCommands.
+The Client create some ConcreteCommands injecting the Receiver with const myCommand = new ConcreteCommand(someReceiver, ...someArgs)
+When the Client wants to execute the ConcreteCommand, it calls invoker.executeCommand(someConcreteCommand) which do some stuff then calls someConcreteCommand.execute() and pushes the command to some array.
+The ConcreteCommand then execute the necessary operation, calling methods in the Receiver when necessary and undo()'ing it also when necessary.
+If the Client needs to undo something, call someInvoker.undoLastCommand() for instance.
+
+INSIGHTS
+  - you can queue, undo, log commands.
+
+COLLABORATIONS
+  - Replace Conditional Dispatcher with Command
+
+USE CASES
+  - handle Bank Accounts with deposit and withdrawal commands.
+
+================================================================================
+GLOSSARY
+
+Client
+Command [Action]: object that encapsulates all the information needed to perform an action or trigger an event.
+  - it's an interface with execute() and usually undo()
+  - usually the Receiver is injected into the Command via constructor.
+  - then the Command process the request calling some methods in the Receiver with the correct parameters.
+Command: it's an Intention to Act, and you can tell it to fuck it off.
+  - an Event, by contrast, is a notification or a signal that something has happened.
+ConcreteCommand
+Invoker [Caller, Manager, Scheduler, Queue, Dispatcher]: the Client asks the Invoker to execute some command.
+  - keeps an array of the commands.
+  - has an undo method like undoLastCommand() that calls command.undo()
+  - invoker.executeCommand(myCommand).
+Receiver [Target]: executes the action
