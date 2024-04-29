@@ -27,6 +27,11 @@ COLLABORATIONS
 USE CASES
   - handle Bank Accounts with deposit and withdrawal commands.
 
+QUALITIES
+  - the action and the target object are encapsulated in the Command.
+  - decouples the Invoker from the Receiver.
+  - the encapsulated requests can be reused in different parts of the application.
+
 ================================================================================
 GLOSSARY
 
@@ -43,3 +48,5 @@ Invoker [Caller, Manager, Scheduler, Queue, Dispatcher]: the Client asks the Inv
   - has an undo method like undoLastCommand() that calls command.undo()
   - invoker.executeCommand(myCommand).
 Receiver [Target]: executes the action
+Request: demand to perform a certain action or operation within a software system with the encapsulation of all the information needed including necessary parameters and the target object (receiver).
+  - it decouples the Invoker from the Receiver because only the Command knows the Receiver because it is injected dynamically into the Command via constructor in the Client code.
