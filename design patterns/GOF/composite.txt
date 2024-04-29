@@ -1,27 +1,30 @@
 INTENT
-Compose objects into tree structures to represent part-whole hierarchies. Composite
-lets clients treat individual objects and compositions of objects uniformly.
+Compose Objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual Objects and compositions of Objects uniformly.
 
 PARTICIPANTS
 Client, Component, Composite, Leaf
 
+CLASSIFICATION
+It's a Structural pattern because compose objects into larger structures.
+It has Object Scope because the tree is constructed dynamically at run-time, hence it deals with Objects.
+
 IMPLEMENTATION
-Each element in the tree structure is either a Leaf or a Composite. But both of
-these elements implement the same Composite interface. The interface have tree
-related methods such as add(Component), remove(Component) and getChild(int) or
-getChildren(Component[]).
+Each node in the tree structure is either a Leaf or a Composite.
+Both of these elements implement the same Component interface.
+A Composite has a bunch of Components (Leafs or other Composites)
+The interface have tree related methods such as add(Component), remove(Component) and getChild(int) or getChildren(Component[]).
 
 INSIGHTS
-
 - To be a Composite candidate, usually the problem will have
   > a tree structure.
-  > a Leaf with some property that could make sense and be calculated to 
-  Composites.
+  > a Leaf with some property that could make sense and be calculated to Composites.
   > a Composite node performs calculations similar to those of a Leaf node;
   however, it iterates through its children to carry out these operations.
 - Composite Pattern is not only about some Tree Data Structure. It's about
 being able to treat Composites as a single node and perform calculations on it
 the same way you would perform it on a Leaf.
+
+COLLABORATIONS
 
 USE CASES
 
@@ -35,6 +38,8 @@ investments and groups of investments alike.
 
 Computer Aided Design: geometric shapes can be composed into more complex
 structures.
+
+QUALITIES
 
 ================================================================================
 GLOSSARY
