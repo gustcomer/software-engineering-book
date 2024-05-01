@@ -19,9 +19,12 @@ INSIGHTS
 - it is only really useful when you have to iterate through different objects and accumulate information.
 - the visitor allows adding new virtual functions to a family of classes, without modifying the classes.
 - since the Visitor has to virtual methods (the accept in the Element interface and the visit in the Visitor interface) it implements double dispatch.
+- the alternative to not use Visitor would be a big conditional statement depending on the classes with instanceof.
+- if you don't need accumulation, you don't need double dispatch. Pick another pattern.
 
 COLLABORATIONS
 - use Iterator Pattern to make the Visitor be able to iterate.
+- Move Accumulation to Visitor - refactor
 
 USE CASES
 - you have different kind of reports and you need to accumulate information on them.
