@@ -1,0 +1,45 @@
+INTENT
+Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+
+PARTICIPANTS
+Visitor, ConcreteVisitor, Element, ConcreteElement, ObjectStructure
+
+CLASSIFICATION
+It is a Behavioral pattern because the related objects perform a new operation without changing the classes of the elements on which it operates. This behavior wouldn't be possible otherwise.
+It has Object scope because the Visitor visits instantiated objects.
+
+IMPLEMENTATION
+The Client will have some kind of ObjectStructure with elements of different subclasses of the Element interface.
+These elements implement the Element interface, which defines an accept(visitor) method.
+The Client instantiate a ConcreteVisitor, that implements the Visitor interface and defines one method for each kind of object it is visiting. Each ConcreteVisitor perform some specific task.
+The Client calls the accept method injecting the visitor with e.accept(v) and the element e calls v.visit(this) passing itself to the Visitor wich will collect information.
+The main objective of the ConcreteVisitor is to accumulate information, so usually the Client iterates the Visitor through some ObjectStrucutre such as list, tree, etc.
+
+INSIGHTS
+- it is only really useful when you have to iterate through different objects and accumulate information.
+- the visitor allows adding new virtual functions to a family of classes, without modifying the classes.
+- since the Visitor has to virtual methods (the accept in the Element interface and the visit in the Visitor interface) it implements double dispatch.
+
+COLLABORATIONS
+- use Iterator Pattern to make the Visitor be able to iterate.
+
+USE CASES
+- you have different kind of reports and you need to accumulate information on them.
+
+QUALITIES
+- follows OCP because new operations can be added to existing object structures without modifying the structures.
+
+================================================================================
+GLOSSARY
+
+ConcreteElement: implements the element interface and defines the accept method, which calls the related visit method of the visitor.
+ConcreteVisitor: implements the visitor interface and defines the algorithm for each type of element.
+dynamic dispatch: selecting which implementation of a polymorphic operation (method or function) to call at run time.
+  - different from static dispatch and late binding (dynamic binding).
+Element: an interface for accepting a visitor object.
+ObjectStructure: a collection of elements with different subclasses that can have visitors execute operations over them.
+  - could be a tree, a list, an array, in which each node has varied subclasses.
+virtual function/method: inheritable function or method that is dispatched dynamically.
+  - they are an important part of (runtime) polymorphism
+Visitor: declares a visit operation for each type of concrete element in the object structure. These operations encapsulate the algorithm that is executed on the elements.
+  - the different methods could be implemented using method overloading or methods with different names for each kind of object they are visiting.
