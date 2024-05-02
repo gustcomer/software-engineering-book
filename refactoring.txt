@@ -17,7 +17,9 @@ REFACTORINGS - Fowler and Beck
 
 Change Function Declaration: pick a better function name, add or remove parameters, change parameters names, etc.
 Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
+Extract Variable [Introduce Explaining Variable]: if an expression becomes very complex, create some local variables and replace part of the expression.
 Inline Function [Inline Method]: the inverse of Extract Function.
+Inline Variable: the inverse of Extract Variable.
 
 ################################################################################
 REFACTORINGS - Joshua Kerievsky
