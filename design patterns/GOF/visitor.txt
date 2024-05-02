@@ -21,6 +21,7 @@ INSIGHTS
 - since the Visitor has to virtual methods (the accept in the Element interface and the visit in the Visitor interface) it implements double dispatch.
 - the alternative to not use Visitor would be a big conditional statement depending on the classes with instanceof.
 - if you don't need accumulation, you don't need double dispatch. Pick another pattern.
+- note that, on one hand, the ConcreteElement depends on the Visitor and must call the Visitor; on the other hand, the Visitor accepts any Element.
 
 COLLABORATIONS
 - use Iterator Pattern to make the Visitor be able to iterate.
