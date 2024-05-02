@@ -1,0 +1,41 @@
+INTENT
+Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+ALSO KNOWN AS
+Wrapper
+
+PARTICIPANTS
+Client, Target, Adaptee, Adapter
+
+CLASSIFICATION
+It's a Structure Pattern because classes combine to form something that looks like the same class but with different interface.
+It has Object scope since it deals only with Classes and interfaces.
+
+IMPLEMENTATION
+The Client is used to the Target interface and wants to conform to the Adaptee interface.
+It then creates an Adapter that implement both the interfaces of the Target and Adaptee.
+Then the Adapter defines the method of the Target interface, but making a call to the Adaptee method defined in its interface.
+The Client instantiates the Adapter and calls the method in its interface as if it was calling the Adaptee method.
+
+INSIGHTS
+- you have to use a language that allows multiple inheritance to implement this pattern.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+- some languages don't support multiple inheritance and you have to do workarounds with interfaces.
+- some say that the Adapter is high coupled to the Adaptee, but I think this is the nature of the problem.
+- it would be easier to change the Adaptee if it were composed by the Adapter, it could even be changed dynamically.
+
+================================================================================
+GLOSSARY
+
+Adaptee [Service]: the interface that we want to adapt to.
+Adapter: class that inherits (or implements) both the interfaces of the Target and the Adaptee.
+  - it translates the method from the Adaptee to the method of the Target interface.
+Client
+multiple inheritance: a subclass can inherit from two or more superclasses.
+  - note that it inherits from superclasses, not from interfaces.
+Target [Existing Class]: a class or interface that the Client is familiar with.
