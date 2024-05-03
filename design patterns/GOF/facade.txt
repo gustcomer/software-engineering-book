@@ -1,0 +1,32 @@
+INTENT
+Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+PARTICIPANTS
+Facade, Client Classes, Subsystem Classes
+
+CLASSIFICATION
+It is a Structural Pattern because one Facade object combines with several subsystem Classes to form something that looks like a big and simplified Class.
+Usually the Facade has Object scope because it instantiates the different subsystems and we also instantiate a Facade Object to use it.
+But it would be possible to design a Facade as a series of static methods and subsystems with static methods, in that case the Facade would have Class scope.
+
+IMPLEMENTATION
+Basically the Facade instantiate all subsystem Classes that it's going to communicate with.
+Then in the Facade Class it defines methods with a simpler interface that uses the subsystem classes.
+The Client Classes or Client code use the simplified interface of the Facade to access the subsystem behaviors.
+
+INSIGHTS
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+- by encapsulating a complex subsystem within a facade, the internal complexity is hidden from the client.
+- decouples the subsystem from its clients, which means that changes to the subsystem do not affect those who use the facade.
+================================================================================
+GLOSSARY
+
+Client Classes: use the functionality of the subsystems through the Facade.
+Facade: knows which subsystem classes are responsible for a request.
+Subsystem Classes: implement subsystem functionality.
+  - have no knowledge of the facade; that is, they keep no references to it.
