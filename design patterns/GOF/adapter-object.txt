@@ -1,0 +1,31 @@
+INTENT
+Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+ALSO KNOWN AS
+Wrapper
+
+PARTICIPANTS
+Client, Target, Adaptee, Adapter
+
+CLASSIFICATION
+It's a Structure Pattern because classes and Objects combine to form something that looks like the same class but with different interface.
+It has Class scope since it deals only with Classes and interfaces.
+
+IMPLEMENTATION
+The Client is used to the Target interface and wants to conform to the Adaptee interface.
+It then creates an Adapter that implements the Target interface and contains an Adaptee.
+Then the Adapter defines the method of the Target interface, but making a call to the Adaptee method defined in its interface.
+The Client instantiates the Adapter and calls the method in its interface as if it was calling the Adaptee method.
+
+INSIGHTS
+- the only difference to adapter-class is that the Adapter composes the Adaptee, instead of implementing its interface or inheriting the superclass.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+- possible to change the behavior of the adapter during runtime by attaching it to different adaptees.
+
+================================================================================
+GLOSSARY
