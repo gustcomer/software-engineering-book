@@ -1,0 +1,39 @@
+INTENT
+Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
+
+PARTICIPANTS
+Mediator, ConcreteMediator, Colleague, ConcreteColleague
+
+CLASSIFICATION
+It is a Behavioral Pattern because it involves objects that combine to communicate in a more effective way.
+It has Object scope because the pattern involves interaction, and interaction translate to objects messaging each other.
+Besides, the Mediator Contains the Colleagues that interact, and "contain" also imply in Objects instead of Classes.
+
+IMPLEMENTATION
+We don't pay too much attention to the Client code, but suppose that the Mediator is already instantiated and that each Colleague is already registered.
+We work with a ConcreteMediator implementing the Mediator interface, which usually has a register(colleague) method.
+All the ConcreteColleagues are injected with the ConcreteMediator possibly via constructor, and the ConcreteMediator composes all the ConcreteColleagues.
+When the ConcreteCollegue wants to interact with other Objects, it calls some method that will call some method on the ConcreteMediator.
+The Mediator will have a big conditional statement that will take the right action for each sender, possibly with one method for each sender.
+When the Mediator is responding, it probably will call some method on the receiver passing some parameters.
+
+INSIGHTS
+- if you are working with only one type of Mediator, there is no need to use a Mediator interface, use ConcreteMediator directly.
+- usually, colleagues have a send() method for when they act as senders and a receive() method for when they act as receivers.
+
+COLLABORATIONS
+
+USE CASES
+- chatroom as the Mediator and participants as the Colleagues.
+
+QUALITIES
+- promotes loose coupling by encapsulating the way objects interact and communicate with each other.
+
+================================================================================
+GLOSSARY
+
+Colleague [Component]: defines the interface for communication with other Colleagues through its Mediator
+ConcreteColleague: coordinates communication between Colleague objects.
+  - It is aware of all of the Colleagues.
+ConcreteMediator: communicates with other Colleagues through its Mediator.
+Mediator: interface with +notify(sender) which will have a if/else condition to reactOnX() where X is the Calling Colleague
