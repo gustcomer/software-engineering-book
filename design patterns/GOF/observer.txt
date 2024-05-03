@@ -1,0 +1,43 @@
+INTENT
+Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+ALSO KNOWN AS
+Publish-Subscribe
+
+PARTICIPANTS
+Subject, ConcreteSubject, Observer, ConcreteObserver
+
+CLASSIFICATION
+It is a Behavioral Pattern because objects collaborate to perform tasks that wouldn't be possible otherwise.
+It has Object scope because it involve communication in the form of notification, and communication means Objects communicating.
+
+IMPLEMENTATION
+The focus is not the Client, but the Client instantiates a ConcreteSubject and some ConcreteObservers.
+Then the Client attaches observers to the subject with subject.attach(observer1).
+Now, when the subject updates the state with some subject.setState(5), the setState() method calls some this.notifyObservers().
+The method notifyObservers iterates through each ConcreteObserver attached and calls the observer.update(this) method passing itself as parameter.
+The update(subject: Subject) method is called on the ConcreteObject and can access the ConcreteSubject information that was passed as parameter.
+The update method is responsible to update any view or variable on each ConcreteObserver.
+
+INSIGHTS
+- you can dynamically add and remove observers without modifying the subject or other observers.
+- if you have just one Subject, you don't need a Subject interface
+
+COLLABORATIONS
+
+USE CASES
+- MVC where the Model is the Subject and the View is the Observer.
+- update some quotation of financial data where the data is the Subject and the Objects that use this quotation like some risk calculators are the Observers.
+
+QUALITIES
+- the subject doesn't need to know much about the observers, just its interface. It helps to minimize (not eliminate) the degree of coupling between these objects.
+
+================================================================================
+GLOSSARY
+
+ConcreteObserver [ConcreteSubscriber]: Maintains a reference to a Concrete Subject, implements the Observer updating interface to keep its state consistent with the subject.
+ConcreteSubject: stores the state of interest and sends a notification to its observers when its state changes.
+Observer [Subscriber]: interface that provides an update that is called when the Subject changes.
+  - has an update(subject: Subject) that is called when the Subject changes its state. The Subject passes itself as parameter so that the Observer can retrieve the new data.
+Subject [Publisher]: interface that maintains a list of observers, attach and detach observers.
+  - has attach(observer), detatch(observer), notifyObservers() and some setState() that will call the notifyObservers().

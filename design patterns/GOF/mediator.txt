@@ -20,6 +20,7 @@ When the Mediator is responding, it probably will call some method on the receiv
 INSIGHTS
 - if you are working with only one type of Mediator, there is no need to use a Mediator interface, use ConcreteMediator directly.
 - usually, colleagues have a send() method for when they act as senders and a receive() method for when they act as receivers.
+- the mediator act as an Observer Pattern, but with multiple Subjects that at the same time are Observers of each other.
 
 COLLABORATIONS
 

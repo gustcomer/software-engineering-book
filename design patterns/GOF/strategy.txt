@@ -11,6 +11,7 @@ CLASSIFICATION
 It's Behavioral because the Context distribute responsibilities to other objects.
 It has Object scope because we are changing object behavior dynamically.
 It's a Behavioral Object pattern because describe how the Context and the Strategy objects cooperate to perform a task that could not be carried out alone.
+In my opinion Strategy could be seen as a Structural Pattern because objects combine to form the illusion of a bigger object.
 
 IMPLEMENTATION
 The Client instantiate a ConcreteStrategy and set it to the Context propriety of the type Strategy via dependency injection from the Client.
