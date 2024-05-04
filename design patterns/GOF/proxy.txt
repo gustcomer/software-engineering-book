@@ -1,0 +1,42 @@
+INTENT
+Provide a surrogate or placeholder for another object to control access to it.
+
+ALSO KNOWN AS
+Surrogate
+
+PARTICIPANTS
+Client, Subject, RealSubject, Proxy
+
+CLASSIFICATION
+It's a Structural Pattern because objects combine to form a bigger object.
+It has Object scope because you instantiate the RealSubject and the Proxy to use them.
+
+IMPLEMENTATION
+The Client usually instantiates a RealSubject.
+Then it instantiates the Proxy, injecting the RealSubject.
+Both the RealSubject and the Proxy implement the same interface, so the Client can use the Proxy just like using the RealSubject.
+
+INSIGHTS
+- there are different types of proxy:
+  - Remote Proxy: local execution of a remote service. handles the intricacies of making a remote call to these objects as if they were local to the client.
+  - Virtual Proxy: used for lazy initialization.
+  - Protection Proxy: access control like permission rights.
+  - Smart Reference Proxy: stuff like management of resources, garbage collection
+  - Caching Proxy
+
+COLLABORATIONS
+- proxies usually add behavior before and after the requisition, just like a Decorator.
+- proxies never change the interface of the Subject, different from Adapters.
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+Client
+Proxy: keeps a reference to the Subject, so it can forward requests to the Subject when necessary.
+RealSubject [Service]: does most of the real work and is controlled by the Proxy.
+Subject [ServiceInterface]: interface that is implemented by both the Proxy and the RealSubject.
+  - allows the Client to treat the Proxy just like the RealSubject.
