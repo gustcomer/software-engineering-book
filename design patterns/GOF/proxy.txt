@@ -23,14 +23,18 @@ INSIGHTS
   - Protection Proxy: access control like permission rights.
   - Smart Reference Proxy: stuff like management of resources, garbage collection
   - Caching Proxy
+- ensure that the proxy and the real subject stay synchronized, particularly in dynamic environments where the real subject's state can change independently of the proxy.
 
 COLLABORATIONS
 - proxies usually add behavior before and after the requisition, just like a Decorator.
 - proxies never change the interface of the Subject, different from Adapters.
 
 USE CASES
+- security access control.
+- resource optimization.
 
 QUALITIES
+- proxies add a layer of abstraction that can lead to performance overhead
 
 ================================================================================
 GLOSSARY
