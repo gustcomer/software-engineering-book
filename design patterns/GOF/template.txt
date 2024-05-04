@@ -1,0 +1,37 @@
+INTENT
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+
+ALSO KNOWN AS
+
+PARTICIPANTS
+AbstractClass, ConcreteClass
+
+CLASSIFICATION
+It is a Behavioral Pattern because Classes combine with inheritance to do behavior that would be harder to do alone.
+It has Class scope because it is purely based on inheritance and there is no need to instantiate any objects.
+
+IMPLEMENTATION
+The AbstractClass has a templateMethod() which implements an algorithm defined in steps. Each step is a primitiveMethodX().
+The ConcreteClass implements the AbstractClass and redefines some of its steps by redefining some primitiveMethodX().
+This is the pattern, there is no need to instantiate any Object.
+But to profit from it you simply instantiate the ConcreteClass in some Client code and call the templateMethod().
+
+INSIGHTS
+- this pattern is not just about some good old inheritance, it's also about dividing some complex algorithm in steps and make some of these steps customizable.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+- this pattern is another way to promote OCP.
+
+================================================================================
+GLOSSARY
+
+AbstractClass: has a template method which implements an algorithm defined in steps. Each step is also a method in this Absctract Class.
+Algorithm: sequence of steps or a set of rules designed to solve a specific problem or accomplish a task.
+  - "Algorithm" suggests a broader concept than methods or functions that can be implemented in various ways, allowing for greater flexibility and interchangeability of the strategies used.
+  - when you have many different ways to perform a task, you can call it an Algorithm.
+  - objects that represent a process or algorithm don't occur in nature.
+ConcreteClass: implements the AbstractClass and redefines some of the steps of the algorithm defined in the Abstract Class.
