@@ -1,0 +1,58 @@
+INTENT
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
+
+PARTICIPANTS
+Handler, ConcreteHandler, AbstractHandler(optional), Client, Request
+
+BEHAVIOR
+Handler(interface)
+  setNext(handler: Handler): Handler
+  handle(request: Request): string
+AbstractHandler(abstract class that implements Handler)
+  private nextHandler: Handler | null
+  setNext(handler: Handler): Handler
+  handle(request: Request): string
+ConcreteHandler
+  handle(request: Request): string
+
+CLASSIFICATION
+It's a Behavioral Pattern because it's about a series of Objects ensembled in a linked list that handle requests in an intelligent way that wouldn't be possible alone.
+It's Object scope because it has a linked list of instantiated handlers. Furthermore, a nextHandler() promotes communication, and communication means instantiated Objects.
+
+IMPLEMENTATION
+The Client code wants to process a Request. First, it create a list of ConcreteHandlers and chain them calling the setNext() method.
+Usually the ConcreteHandlers inherit from AbstractHandlers, which in turn implement the Handler interface. The setNext() is in the Handle signature and is implemented in the AbstractHandler.
+After chaining the handlers, the Requisition is instantiated and passed as argument to the first handler of the chain.
+Each ConcreteHandler will perform some calculations on the Request with handle() and deciding between terminating the process or call super.handle() to check if there are any other handlers in the chain. 
+
+INSIGHTS
+- this pattern has exactly the same idea as middlewares, but applied to OOP.
+- there are many ways to do a sequence of sequential validations without using linked list, but this pattern is the perfect way to keep it Open to Extension but Closed to modifications (OCP).
+
+COLLABORATIONS
+
+USE CASES
+- middlewares.
+
+QUALITIES
+- handlers can be added or changed dynamically, which favors OCP.
+- spreads out the responsibilities among multiple objects instead of having a single object handle all variations of a task, which favors SRP.
+
+================================================================================
+GLOSSARY
+
+AbstractHandler(optional): intermediary abstract class that implements the Handler interface and will possibly be inherited by the ConcreteHandlers.
+  - here is a good place to store an attribute to reference the next handler. The name could be successor, nextHandler, etc, it could have null value when there are no more handlers in the chain.
+  - provides just the basic implementation of handle(request) that will implement the call to the next handle. The business logic should be implemented in the ConcreteClass that will inherit this abstract class and call it with super.handle(request).
+  - implements the setNext(handler) that will update the successors data structure.
+Client: will deal with a set of requests and each request will be processed by a series of handlers.
+  - instantiate several handlers and enqueue them with a series of calls to setNext(handler) posibly with chaining calls.
+ConcreteHandler:  implement the handler interface. Each handler checks if it can handle the request. If it can, it does so; otherwise, it forwards the request to the next handler, if there is one.
+  - they have a handle() method that usually decides between terminating the processing or call the superclass handle() to call the next handler.
+Handler: interface implemented by each Concrete Handler.
+  it defines some handleRequest(request) or handle(request) method to be implemented.
+  it defines some setNext(handler) method that will set the next successor in the chain.
+  obviously interfaces impose only behavior and not structure, so the reference to the successor (or next) that is the next Handler in chain shall be structured in the ConcreteHandler or in the optional and intermediary AbstractHandler
+  the handle() in the superclass is responsible for calling the next handler or terminate the processing, if the case. Usually it is called by the handler in the ConcreteHandlers if the case.
+Request: DTO or Value Object that is passed to the handlers.
+successor [next]: data structure in the form of linked list which contains the handlers and that can be placed in the AbstractHandler or in the ConcreteHandler.
