@@ -3,7 +3,8 @@ Abstract Class: one whose main purpose is to define a common interface for its s
   - they cannot be instantiated.
   - usually they provide little or no imlementation.
 Abstract Operations: operations that an Abstract Class declares but doesn't implement.
-Abstraction
+Abstraction: layer that isn’t supposed to do any real work on its own. It should delegate the work to the implementation layer.
+  - it's represented by interfaces, virtual methods of abstract classes, etc.
   - higher level of abstraction
 Acquaintance: type of relationship in which an object merely knows of another object.
   - acquainted objects may request operations of each other, but they aren't responsible for each other.
@@ -63,7 +64,8 @@ Framework: set of cooperating classes that make up a reusable design for a speci
   - the framework dictates the architecture of your application.
   - frameworks always have a particular application domain.
 Granularity
-Implementation:
+Implementation: do the real work delegated by the Abstraction.
+  - aka Platform
 Indirection: when the code that uses some interface doesn't need to know about the concrete implementation.
   - check Levels of Indirection
 Inheritance Hierarchies
