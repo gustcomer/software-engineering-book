@@ -16,8 +16,10 @@ Solution Sprawl[K]: When code and/or data used to perform a responsibility becom
 REFACTORINGS - Fowler and Beck
 
 Change Function Declaration: pick a better function name, add or remove parameters, change parameters names, etc.
+Encapsulate Variable: before moving data, first consider encapsulating them with functions, getters and setters.
+  - global data is harded to change than functions because you can forward functions and keep the old one for a while.
 Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
-Extract Variable [Introduce Explaining Variable]: if an expression becomes very complex, create some local variables and replace part of the expression.
+Extract Variable [Introduce Explaining Variable]: if an expression becomes very complex, create some local variables with good explanatory names and replace part of the expression.
 Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
 
