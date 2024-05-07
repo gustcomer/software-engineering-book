@@ -1,0 +1,38 @@
+INTENT
+Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+ALSO KNOWN AS
+Cursor
+
+PARTICIPANTS
+Iterator, ConcreteIterator, Aggregate, ConcreteAggregate
+
+BEHAVIOR
+
+CLASSIFICATION
+
+IMPLEMENTATION
+The Client code instantiates a ConcreteAggregate and add items to this collection.
+The ConcreteAggregate stores the data in some data structure and implements the Aggregate interface which imposes a createIterator() method.
+The createIterator() returns a ConcreteIterator capable of iterating through the ConcreteAggregate data structure.
+The ConcreteIterator implements the Iterator interface which defines different methods to navigate the strucutre such as getNext(), hasEnd(), etc.
+The ConcreteIterator has to have a reference to the ConcreteAggregate data structure, but this is handled by the ConcreteAggregate in the createIterator() by injecting 'this' into the newly created ConcreteIterator that will be returned.
+
+INSIGHTS
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+Aggregate[IterableCollection]: interface that defines the method createIterator() to create an iterator object to traverse its elements.
+ConcreteAggregate[ConcreteCollection]: implements the Aggregate interface and returns an instance of the corresponding Concrete Iterator.
+ConcreteIterator: implements the Iterator interface and handles the traversal of the collection.
+  - has position attribute that keeps track of the current position in the traversal.
+Iterator: interface that provides methods for accessing and traversing elements. The set of methods that the interface provide may vary.
+  - a minimal interface would have: getNext() and hasMore()
+  - other useful methods would be: first(), next(), isDone(), remove()
