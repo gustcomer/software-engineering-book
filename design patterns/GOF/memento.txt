@@ -1,0 +1,59 @@
+INTENT
+Without violating encapsulation, capture and externalize an object’s internal state so that the object can be restored to this state later.
+
+ALSO KNOWN AS
+Token, Snapshot
+
+PARTICIPANTS
+Originator, Memento, Caretaker
+
+BEHAVIOR
+Originator
+  private state: T;
+  public setState(state)
+  public getState();
+  public save();
+  public restore(memento: Memento)
+Memento
+  private state;
+  public getState();
+Caretaker
+  private originator: Originator;
+  private mementos: Memento[]
+  public backup();
+  public undo()
+  public showHistory()
+
+CLASSIFICATION
+
+IMPLEMENTATION
+The Client code instantiates an Originator with an initial state.
+The Client code instantiates a Caretaker injecting the Originator into its constructor.
+Some changes in the originator occur and the Client decides to set the new state in the originator.
+Due to the changes, the Caretaker decides to backup the actual Originator state and calls the backup() method.
+The backup method calls the Originator save() method, which returns a new Memento containig a snapshot of the actual state.
+Then the backup adds this new Memento to the array of Mementos of the Caretaker.
+If we want to undo the changes, call the undo() method of the Caretaker, which will pop the last Memento from the array and restore() it in the Originator.
+
+
+INSIGHTS
+- allows an object to save its state at a certain point in time and restore it later.
+- particularly useful in applications that need to implement features like undo mechanisms or save and restore functionality.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+Caretaker: responsible for keeping the memento.
+  - decides when to save the state of the originator into a memento and when to restore the originator's state from a memento.
+  - it usually contains some array of Mementos
+Memento: holds the actual state of the Originator. It serves as a data container.
+  - it can have two interfaces: a narrow interface for the caretaker (which only allows saving the memento) and a wide interface for the originator (which allows both saving and restoring the state).
+Originator: main object whose state needs to be saved and restored.
+  - creates a memento containing a snapshot of its current internal state.
+  - it can also use the memento to restore its state to a previous version.
