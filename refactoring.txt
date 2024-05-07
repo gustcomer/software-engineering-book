@@ -22,6 +22,8 @@ Extract Function [Extract Method]: look at a fragment of code, understand what i
 Extract Variable [Introduce Explaining Variable]: if an expression becomes very complex, create some local variables with good explanatory names and replace part of the expression.
 Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
+Introduce Parameter Object: put a set of related input parameters into a single structure.
+Rename Variable: improve the name of the variable as your understanding of the problem grows.
 
 ################################################################################
 REFACTORINGS - Joshua Kerievsky
