@@ -1,0 +1,48 @@
+INTENT
+Use sharing to support large numbers of fine-grained objects efficiently.
+
+PARTICIPANTS
+FlyweightFactory, Flyweight, ConcreteFlyweight, UnsharedConcreteFlyweight, Client
+
+Behavior
+FlyweightFactory
+  private items: { [key: string]: Flyweight } = {};
+  getItem(configKey: string, config: any): Flyweight { ...check the cache... }
+Flyweight(interface)
+  operate(extrinsicState)
+ConcreteFlyweight(implements Flyweight)
+  private intrinsicState;
+  operate(extrinsicState)
+UnsharedConcreteFlyweight
+  private unshareableState;
+  operate(extrinsicState)
+
+CLASSIFICATION
+
+IMPLEMENTATION
+The Client code instantiates a FlyweightFactory.
+We use the getItem({x:...,y:...}) method of the factory passing the intrinsic states to get an existing ConcreteFlyweight or create a new one if the case.
+The FlyweightFactory takes care of all the details with a caching system.
+In case we want an UnsharedConcreteFlyweight, we directly instantiate one instead of using the factory.
+To execute an operation on the Flyweights, simply call operate({w:...,z:...}) passing the extrinsic states.
+
+INSIGHTS
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+ConcreteFlyweight: represents the shareable version of the Flyweight objects. All its state should be intrinsic, that is, shareable.
+Extrinsic State: state of the object that can't be shared and depends on the object’s context.
+  - This state is typically passed to the Flyweight methods by the client and not stored in the Flyweight object itself.
+  - basically it is the arguments that the Client code pass as parameter to the operate() method of the Flyweight objects.
+Flyweight: interface that defines an operate(extrinsicState)
+FlyweightFactory: when a client requests a Flyweight, the factory either provides an existing instance or creates a new one if no suitable instance exists.
+  - basically it manages the creation and reuse of the Flyweight objects like a caching system.
+Intrinsic State: state of the object that can be shared, which is not dependent on the object's context. This shared state is stored in the Flyweight objects.
+UnsharedConcreteFlyweight: does the same thing that the shareable ConcreteFlyweight does, but doesn't have intrinsic (shareable) state and doesn't take part in the FlyweightFactory caching system.
