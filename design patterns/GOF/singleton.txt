@@ -1,0 +1,30 @@
+INTENT
+Ensure a class only has one instance, and provide a global point of access to it.
+
+PARTICIPANTS
+Singleton
+
+BEHAVIOR
+
+CLASSIFICATION
+
+IMPLEMENTATION
+The Singleton must have a private constructor. That way you can only instantiate the Singleton via the static method.
+The Singleton holds a single instance of the Singleton object and you access this object via the getInstance() static method.
+The getInstance() creates the instance if it doesn't exist, and returns the existing one if it already exists.
+After getting your hands on a Singleton object, you can call methods to perform some business logic.
+
+INSIGHTS
+- the Singleton class breaks SRP because it has two responsibilities: take care that only one instance is instantiated and handle some business logic.
+- if you compare any two singletons with the === operator, you'll get that they are the same Object.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+Singleton: 
