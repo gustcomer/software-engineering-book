@@ -1,0 +1,37 @@
+INTENT
+Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+ALSO KNOWN AS
+Objects for States
+
+PARTICIPANTS
+Context, State, ConcreteStateX
+
+BEHAVIOR
+
+CLASSIFICATION
+
+IMPLEMENTATION
+The Client code instantiates a Context, which choose an initial ConcreteState or be injected one via constructor.
+Each ConcreteState can ask the Context to change state, so usually the Context injects itself via each ConcreteState constructor.
+The Context keeps track of the actual state and offers behavior through request methods that call the corresponding method in the actual ConcreteState.
+We can change the state of the Context manually via methods, but it is more useful if it works as a state machine.
+When a behavior method is called in some ConcreteState, it can ask the Context to change its state, remember that Context is injected in each ConcreteState.
+Each action called in the Context will be executed differently, depending on the actual state of the Context.
+
+INSIGHTS
+- each change of state seems to instantiate a new State. It could become heavy.
+
+COLLABORATIONS
+- the problem with instantiation of repeated states could be solved using Singleton.
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+ConcreteStateX: implement the State interface and provide their own specific behaviors for state-dependent functions.
+Context: maintains an instance of a ConcreteState subclass that defines the current state.
+State: interface for encapsulating the behavior associated with a particular state of the Context.
