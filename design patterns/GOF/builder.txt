@@ -1,0 +1,36 @@
+INTENT
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+
+PARTICIPANTS
+Director, Builder, ConcreteBuilderX, ProductX
+
+CLASSIFICATION
+
+IMPLEMENTATION
+The Client code instantiates a ConcreteBuilderX that has its own way of executing each construction step.
+Then the Client code could optionally instantiate a Director injecting the ConcreteBuilderX.
+The Director will build the Product specifying higher level instructions that are implemented by the ConcreteBuilderX. Each method of the Director represents a different products built by the same ConcreteBuilder.
+Alternatively, the Client code could build the Product without the help of the Director.
+The ConcreteBuilder keeps record of the Products it has built. To access them it provides some getProduct() or build() method.
+The ConcreteBuilder may provide chaining building capabilities, in this case, eact ConcreteBuilder set method must return itself.
+
+INSIGHTS
+- it's funny how usually the ProductX is full of setting methods possibly equal to the ConcreteBuilder methods.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+Builder: interface that defines the methods for constructing the various parts of a product.
+ConcreteBuilderX: Implements the builder interface and provides specific implementations for the construction steps.
+  - it keeps track of the product it builds and offers a method to retrieve the finished product.
+Director: optional, used to control the construction process.
+  - is injected with a builder object and executes the necessary operations on it to construct the product.
+  - decides the sequence of construction steps, while the ConcreteBuilder provides the implementation of those steps.
+ProductX: represents the complex object being built.
+  - instead of a big big constructor, it has several setPropertyX(...) methods.
