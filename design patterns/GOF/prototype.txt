@@ -1,0 +1,39 @@
+INTENT
+Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+
+PARTICIPANTS
+Client, Prototype, ConcretePrototypeX
+
+BEHAVIOR
+
+CLASSIFICATION
+
+IMPLEMENTATION
+The Prototype interface defines only one method clone() that should be implemented by all objects that want to be clonable.
+The Client code can instantiate a ConcretePrototype with the new keyword, but it has the option to clone an existing one.
+To clone an existing object, just call the clone() method on it.
+A new ConcretePrototype will be returned with fields identical to the actual state of the generating ConcretePrototype.
+Each ConcretePrototype will have its own data, and changing the fields of one doesn't affect the fields of the other.
+
+INSIGHTS
+- prototype is a way to generate new objects cloning existing ones.
+- it should be the basis of Object Oriented Programming instead of Class Oriented Programming.
+
+COLLABORATIONS
+
+USE CASES
+Financial Instruments Modeling: make copy of instruments with just slight variations.
+Risk Assessment Models: running multiple simulations with slightly varied parameters.
+
+QUALITIES
+- can be useful to avoid complex initialization.
+- can be useful instantiating things dynamically.
+- can do amazing things instantiating things not yet defined, with reflexive programming, etc.
+- very useful when we want to use a complex object with just slight difference from a former one.
+
+================================================================================
+GLOSSARY
+
+Client: selects which prototype to use and clones it to create new objects.
+ConcretePrototypeX: clonable objects that should implement the Prototype interface.
+Prototype: interface that only defines one method clone() that should be implemented by all objects that want to be clonable.
