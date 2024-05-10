@@ -1,0 +1,37 @@
+INTENT
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+ALSO KNOWN AS
+Kit
+
+PARTICIPANTS
+Client, AbstractFactory, ConcreteFactory, AbstractProductX, ProductXi
+
+BEHAVIOR
+
+CLASSIFICATION
+
+IMPLEMENTATION
+We decide what kind of family of Products we want and ask the Client code to instantiate this kind of ConcreteFactory.
+The ConcreteFactory implements the AbstractFactory interface, so it knows how to create ProductXis that do the stuff specified in the AbstractProductX interface.
+After we tell the Client code what we want, instead of a big conditional statement deciding what to do, the decisions are made via polymorphism of the AbstractFactory and ConcreteFactory.
+The ProductXis are returned and can be used by the Client code.
+If we want another family of ProductX, we instantiate another type of ConcreteFactory.
+Since the ConcretePProductXis implement the same AbstractProductX interface, the Client code can use it interchangeably.
+
+INSIGHTS
+- it's just like the usual Factory Method Pattern, but instead of one Product, there can be many, an instead of one method in the Creator to create a product, we have many methods one for each method.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+AbstractFactory: interface that declares a set of methods for creating each of the abstract products. Each method is responsible for creating a different product.
+AbstractProductX: represents the interface for a type of product object. The pattern uses multiple abstract products to define the products that can be created.
+ConcreteFactory: specific classes that implement the abstract factory interface. Each concrete factory corresponds to a specific family of products and creates all the products in that family.
+ProductXi: classes that implement the abstract product interfaces. Each concrete product belongs to one product family.
