@@ -1,0 +1,35 @@
+INTENT
+Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+
+ALSO KNOWN AS
+Virtual Constructor
+
+PARTICIPANTS
+Creator, ConcreteCreator, Product, ConcreteProduct
+
+CLASSIFICATION
+
+IMPLEMENTATION
+We decide what kind of Product we want and ask the Client code to instantiate this kind of ConcreteCreator.
+The ConcreteCreator implements the Creator interface, so it knows how to create ConcreteProducts that do the stuff specified in the Product interface.
+After we tell the Client code what we want, instead of a big conditional statement deciding what to do, the decisions are made via polymorphism of the Creator and ConcreteCreator.
+The ConcreteProduct is returned and can be used by the Client code.
+If we want another kind of Product, we instantiate another type of Creator.
+Since the ConcreteProducts implement the same Product interface, the Client code can use it interchangeably.
+
+INSIGHTS
+- it deals with the problem of creating objects without specifying the exact class of object that will be created.
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+ConcreteCreator: implements the Creator interface and the factory method to return an instance of a Concrete Product.
+ConcreteProduct: different implementations of the product interface.
+Creator [Factory]: abstract class that declares the factory method, which returns an object of type Product.
+Product: defines the interface of objects the factory method creates.
