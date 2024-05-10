@@ -1,0 +1,29 @@
+INTENT
+A static method that returns an instance of the class it belongs to.
+This is not a GoF pattern.
+
+ALSO KNOWN AS
+Static Creation Method
+
+PARTICIPANTS
+
+CLASSIFICATION
+
+IMPLEMENTATION
+
+INSIGHTS
+- it doesn't require an object to be created.
+- it can be seen as an alternative constructor.
+- it can be used as a pre-step to call the default constructor.
+- constructors have to return a new object, with static methods we can return a cached Object (think of Singleton).
+
+COLLABORATIONS
+- it is used in the Singleton pattern.
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
