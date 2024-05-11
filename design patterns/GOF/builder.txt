@@ -18,6 +18,8 @@ INSIGHTS
 - it's funny how usually the ProductX is full of setting methods possibly equal to the ConcreteBuilder methods.
 
 COLLABORATIONS
+- the Builder has class diagram very similar to Strategy and Bridge patterns. But Builder will have a new statement somewhere, because it is a Creational pattern.
+- usually with Strategy Pattern, each ConcreteStrategy has only one method, representing one behavior per class, while Builder has many methods, representing creation steps.
 
 USE CASES
 
