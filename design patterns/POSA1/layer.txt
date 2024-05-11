@@ -1,0 +1,30 @@
+INTENT
+Structure applications that can be decomposed into groups of subtasks in which each group of subtasks is at a particular level of abstraction.
+
+ALSO KNOWN AS
+N-tier Architecture Pattern
+
+PARTICIPANTS
+
+BEHAVIOR
+
+CLASSIFICATION
+
+IMPLEMENTATION
+
+INSIGHTS
+
+COLLABORATIONS
+
+USE CASES
+- Networking Protocols
+- Enterprise Applications: Layered architecture is widely used in enterprise applications where business rules change frequently and require a clear separation from the UI.
+
+QUALITIES
+- Layer Isolation: Each layer in the architecture serves a specific purpose and operates independently of the other layers. This separation of concerns ensures that changes in one layer have minimal impact on others.
+- Each layer communicates with adjacent layers through well-defined interfaces.
+
+================================================================================
+GLOSSARY
+
+Enterprise Applications: have well defined business rules that require separation from the rest of the application.
