@@ -1,0 +1,25 @@
+INTENT
+Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+
+PARTICIPANTS
+Client, Context, AbstractExpression, TerminalExpression, NonTerminalExpression
+
+CLASSIFICATION
+
+IMPLEMENTATION
+
+INSIGHTS
+
+COLLABORATIONS
+
+USE CASES
+
+QUALITIES
+
+================================================================================
+GLOSSARY
+
+AbstractExpression
+Context
+NonTerminalExpression
+TerminalExpression
