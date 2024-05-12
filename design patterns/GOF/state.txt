@@ -10,6 +10,8 @@ Context, State, ConcreteStateX
 BEHAVIOR
 
 CLASSIFICATION
+This is a Behavioral Pattern because object combine to do stuff that wouldn't be possible alone. Besides the states are changed and are not permanent part of the Context.
+It has Object Scope because the states are instantiated and composed.
 
 IMPLEMENTATION
 The Client code instantiates a Context, which choose an initial ConcreteState or be injected one via constructor.
@@ -21,6 +23,7 @@ Each action called in the Context will be executed differently, depending on the
 
 INSIGHTS
 - each change of state seems to instantiate a new State. It could become heavy.
+- we have to change the states dynamically, and this is only possible because we favor composition over inheritance.
 
 COLLABORATIONS
 - the problem with instantiation of repeated states could be solved using Singleton.
