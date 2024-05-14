@@ -17,6 +17,9 @@ REFACTORINGS - Fowler and Beck
 
 Change Function Declaration: pick a better function name, add or remove parameters, change parameters names, etc.
 Combine Functions into Class: transform group of functions that operate closely together on a common body of data usually passed as arguments to the function call.
+Combine Functions into Transform: take different functions that calculate some derived value from some input data and group them in a transforming function on the input data.
+  - like Combine Functions into Class
+  - a transformation function picks the argument data, deep clone it and return it with added fields, modified values, etc.
 Encapsulate Variable: before moving data, first consider encapsulating them with functions, getters and setters.
   - global data is harded to change than functions because you can forward functions and keep the old one for a while.
 Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
