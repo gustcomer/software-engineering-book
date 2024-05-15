@@ -1,0 +1,31 @@
+CREATIONAL
+
+Abstract Factory: Client, AbstractFactory, ConcreteFactory, AbstractProductX, ProductXi
+Builder: Director, Builder, ConcreteBuilderX, ProductX
+Factory Method: Creator, ConcreteCreator, Product, ConcreteProduct
+Prototype: Client, Prototype, ConcretePrototypeX
+Singleton: Singleton
+
+STRUCTURAL
+
+Adapter: Client, Target, Adaptee, Adapter
+Bridge: Abstraction, RefinedAbstraction, Implementor, ConcreteImplementorX, Client
+Composite: Client, Component, Composite, Leaf
+Decorator: Client, Component, ConcreteComponent, Decorator, ConcreteDecorator
+Facade: Facade, Client Classes, Subsystem Classes
+Flyweight: FlyweightFactory, Flyweight, ConcreteFlyweight, UnsharedConcreteFlyweight, Client
+Proxy: Client, Subject, RealSubject, Proxy
+
+BEHAVIORAL
+
+Chain of Responsibility: Handler, ConcreteHandler, AbstractHandler(optional), Client, Request
+Command: Client, Command, ConcreteCommand, Receiver, Invoker
+Interpreter: Client, Context, AbstractExpression, TerminalExpression, NonTerminalExpression
+Iterator: Iterator, ConcreteIterator, Aggregate, ConcreteAggregate
+Mediator: Mediator, ConcreteMediator, Colleague, ConcreteColleague
+Memento: Originator, Memento, Caretaker
+Observer: Subject, ConcreteSubject, Observer, ConcreteObserver
+State: Context, State, ConcreteStateX
+Strategy: Context, Strategy, ConcreteStrategyX, Client
+Template: AbstractClass, ConcreteClass
+Visitor: Visitor, ConcreteVisitor, Element, ConcreteElement, ObjectStructure
