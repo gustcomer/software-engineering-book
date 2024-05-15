@@ -28,6 +28,7 @@ Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
 Introduce Parameter Object: put a set of related input parameters into a single structure.
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
+Split Phase: take each phase of a function and break it into smaller functions. Make one more high level function calling lower level functions representing the steps.
 
 ################################################################################
 REFACTORINGS - Joshua Kerievsky
