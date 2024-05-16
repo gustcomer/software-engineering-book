@@ -26,6 +26,6 @@ Mediator: Mediator, ConcreteMediator, Colleague, ConcreteColleague
 Memento: Originator, Memento, Caretaker
 Observer: Subject, ConcreteSubject, Observer, ConcreteObserver
 State: Context, State, ConcreteStateX
-Strategy: Context, Strategy, ConcreteStrategyX, Client
+Strategy: Context, Strategy, ConcreteStrategyX
 Template: AbstractClass, ConcreteClass
 Visitor: Visitor, ConcreteVisitor, Element, ConcreteElement, ObjectStructure

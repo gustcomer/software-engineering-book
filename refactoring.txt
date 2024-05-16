@@ -20,6 +20,9 @@ Combine Functions into Class: transform group of functions that operate closely 
 Combine Functions into Transform: take different functions that calculate some derived value from some input data and group them in a transforming function on the input data.
   - like Combine Functions into Class
   - a transformation function picks the argument data, deep clone it and return it with added fields, modified values, etc.
+Encapsulate Record: take a immutable record and make them mutable behind a Class definition and methods to manipulate this data.
+  - in this context, Record would be an immutable data structure without much behavior, just like a Value Object.
+  - in this context, encapsulate means put data behind a Class definition, make them mutable, and add some methods to manipulate this data.
 Encapsulate Variable: before moving data, first consider encapsulating them with functions, getters and setters.
   - global data is harded to change than functions because you can forward functions and keep the old one for a while.
 Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
