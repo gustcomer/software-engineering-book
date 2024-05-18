@@ -36,6 +36,8 @@ Introduce Parameter Object: put a set of related input parameters into a single 
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
 Replace Primitive with Object: take a primitive and put it behind a object providing additional behavior.
   - this concept is similar to the concept of Value Objects in DDD.
+Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
+  - depending on the language and the get methods syntax you'll access the variable directly with this.variable or variable().
 Split Phase: take each phase of a function and break it into smaller functions. Make one more high level function calling lower level functions representing the steps.
 
 ################################################################################
