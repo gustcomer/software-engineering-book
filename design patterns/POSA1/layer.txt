@@ -5,12 +5,15 @@ ALSO KNOWN AS
 N-tier Architecture Pattern
 
 PARTICIPANTS
+Layer X, 
 
 BEHAVIOR
 
 CLASSIFICATION
+It is an Architectural Pattern.
 
 IMPLEMENTATION
+The Layer X provides services used by Layer X+1 and delegates subtasks to layer X-1.
 
 INSIGHTS
 
