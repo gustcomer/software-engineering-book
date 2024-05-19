@@ -1,6 +1,8 @@
 ################################################################################
 CODE SMELLS - Fowler and Beck
 
+Duplicated Code: same code in more than one place
+  - you can solve it with Extract Function
 Misterious Name: use good and descriptive names in functions, modules, variables, classes, etc.
   - related to Change Function Declaration refactor.
 Shotgun Surgery[F]: every time you make a change, you have to make a lot of little edits to a lot of different classes.
