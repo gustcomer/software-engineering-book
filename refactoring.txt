@@ -28,6 +28,9 @@ Encapsulate Record: take a immutable record and make them mutable behind a Class
   - in this context, encapsulate means put data behind a Class definition, make them mutable, and add some methods to manipulate this data.
 Encapsulate Variable: before moving data, first consider encapsulating them with functions, getters and setters.
   - global data is harded to change than functions because you can forward functions and keep the old one for a while.
+Extract Class: when a single class has too many data and methods, try to extract some of the data and methods that go together into another class.
+  - it is usually common to extract Value Objects from a bigger object.
+  - the inverse is Inline Class.
 Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
 Extract Variable [Introduce Explaining Variable]: if an expression becomes very complex, create some local variables with good explanatory names and replace part of the expression.
 Inline Function [Inline Method]: the inverse of Extract Function.
