@@ -37,6 +37,8 @@ Extract Class: when a single class has too many data and methods, try to extract
   - the inverse is Inline Class.
 Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
 Extract Variable [Introduce Explaining Variable]: if an expression becomes very complex, create some local variables with good explanatory names and replace part of the expression.
+Inline Class: get smaller classes and group them in a bigger class.
+  - is the inverse of Extract Class.
 Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
 Introduce Parameter Object: put a set of related input parameters into a single structure.
