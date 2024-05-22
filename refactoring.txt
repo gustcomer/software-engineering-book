@@ -26,6 +26,8 @@ Combine Functions into Transform: take different functions that calculate some d
   - a transformation function picks the argument data, deep clone it and return it with added fields, modified values, etc.
 Hide Delegate: when we have a class inside another class, don't let the Client code know about the most inner class. Make the owner class access the method inside the inner, and then pass it to the client code.
   - delegate is someone who represents other person, like a proxy. In this context it means a class that has another class inside it and access it.
+  - it's basically the definition of the Law of Demeter: an object should not “reach through” its collaborators to access their collaborators' data, methods, or collaborators.
+  - the inverse of Hide Delegate is Remove Middle Man.
 Encapsulate Collection: avoid returning the data structures contained in classes and provide adder and remover methods instead of setters.
   - don't let public access the data structure directly.
   - if you need a getter method, return a copy of the collection instead of the original collection itself.
@@ -44,6 +46,9 @@ Inline Class: get smaller classes and group them in a bigger class.
 Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
 Introduce Parameter Object: put a set of related input parameters into a single structure.
+Remove Middle Man: if the fowarding of the middle man everytime there is a new feature is irritating, abandon the Law of Demeter.
+  - The Law of Demeter should be called Occasionally Useful Suggestion of Demeter.
+  - it is the inverse of Hide Delegate
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
 Replace Primitive with Object: take a primitive and put it behind a object providing additional behavior.
   - this concept is similar to the concept of Value Objects in DDD.
