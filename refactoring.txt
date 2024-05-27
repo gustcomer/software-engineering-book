@@ -5,6 +5,7 @@ Duplicated Code: same code in more than one place
   - you can solve it with Extract Function
 Long Functions: smaller functions are prefered since they are easier to understand.
   - usually apply Extract Function to get smaller functions.
+Long Parameter List: 
 Misterious Name: use good and descriptive names in functions, modules, variables, classes, etc.
   - related to Change Function Declaration refactor.
 Shotgun Surgery[F]: every time you make a change, you have to make a lot of little edits to a lot of different classes.
@@ -55,6 +56,7 @@ Replace Primitive with Object: take a primitive and put it behind a object provi
 Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
   - depending on the language and the get methods syntax you'll access the variable directly with this.variable or variable().
 Split Phase: take each phase of a function and break it into smaller functions. Make one more high level function calling lower level functions representing the steps.
+Substitute Algorithm: if you find an easier way to do some task as your knowledge of the problem and the technology grows, just do it.
 
 ################################################################################
 REFACTORINGS - Joshua Kerievsky
