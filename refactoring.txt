@@ -51,6 +51,7 @@ Move Field: move a field from a Class, Object or Record to another one.
   - pieces of data that are always passed to functions together are usually best put in a single record.
   - it's very frequent to move a field from a broader class into a more specific object member of the broader class. 
 Move Function: when a function (method) references elements in other context (classes) more than the on it currently resides, move it.
+Move Statements Into Function: if you see some code executed every time a function is called, combine the repeating code into the function itself.
 Remove Middle Man: if the fowarding of the middle man everytime there is a new feature is irritating, abandon the Law of Demeter.
   - The Law of Demeter should be called Occasionally Useful Suggestion of Demeter.
   - it is the inverse of Hide Delegate
