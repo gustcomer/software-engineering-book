@@ -47,6 +47,9 @@ Inline Class: get smaller classes and group them in a bigger class.
 Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
 Introduce Parameter Object: put a set of related input parameters into a single structure.
+Move Field: move a field from a Class, Object or Record to another one.
+  - pieces of data that are always passed to functions together are usually best put in a single record.
+  - it's very frequent to move a field from a broader class into a more specific object member of the broader class. 
 Move Function: when a function (method) references elements in other context (classes) more than the on it currently resides, move it.
 Remove Middle Man: if the fowarding of the middle man everytime there is a new feature is irritating, abandon the Law of Demeter.
   - The Law of Demeter should be called Occasionally Useful Suggestion of Demeter.
