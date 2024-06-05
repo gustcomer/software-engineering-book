@@ -66,6 +66,8 @@ Replace Primitive with Object: take a primitive and put it behind a object provi
 Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
   - depending on the language and the get methods syntax you'll access the variable directly with this.variable or variable().
 Slide Statements: move together things that are related to each other. Declare variables just before you first use them.
+Split Loop: if you have a loop doing two or more things, split it so it becomes more readable.
+  - if the loop isn't splitted, when you have to change one thing you'll have to understand the other thing as well.
 Split Phase: take each phase of a function and break it into smaller functions. Make one more high level function calling lower level functions representing the steps.
 Substitute Algorithm: if you find an easier way to do some task as your knowledge of the problem and the technology grows, just do it.
 
