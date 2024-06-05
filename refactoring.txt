@@ -55,6 +55,8 @@ Move Statements to Callers: when common behavior used in several places needs to
   - it is the inverse of Move Statements Into Function.
 Move Statements Into Function: if you see some code executed every time a function is called, combine the repeating code into the function itself.
   - it is the inverse of Move Statement to Callers.
+Remove Dead Code: if the code isn't used anymore, delete it. It can become a burden to understand what the code does and that is never called.
+  - don't comment out dead code, you can dig it with version control in case you need the deleted code one day.
 Remove Middle Man: if the fowarding of the middle man everytime there is a new feature is irritating, abandon the Law of Demeter.
   - The Law of Demeter should be called Occasionally Useful Suggestion of Demeter.
   - it is the inverse of Hide Delegate
