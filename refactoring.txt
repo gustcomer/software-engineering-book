@@ -59,7 +59,8 @@ Remove Dead Code: if the code isn't used anymore, delete it. It can become a bur
   - don't comment out dead code, you can dig it with version control in case you need the deleted code one day.
 Remove Middle Man: if the fowarding of the middle man everytime there is a new feature is irritating, abandon the Law of Demeter.
   - The Law of Demeter should be called Occasionally Useful Suggestion of Demeter.
-  - it is the inverse of Hide Delegate
+  - it is the inverse of Hide Delegate.
+Rename Field: improve the name of fields to be more descriptive.
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
 Replace Inline Code with Function Call: take a piece of code and put it in a function with a good descriptive name.
   - similar to Extract Function, but applied to small pieces of code.
