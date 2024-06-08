@@ -62,6 +62,9 @@ Remove Middle Man: if the fowarding of the middle man everytime there is a new f
   - it is the inverse of Hide Delegate.
 Rename Field: improve the name of fields to be more descriptive.
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
+Replace Derived Variable with Query: remove variables that you could easily calculate.
+  - instead of storing a variable that is a simple calculation, do the simple calculation every time you query the result.
+  - it's more readable and if the calculation is simple, it won't affect performance.
 Replace Inline Code with Function Call: take a piece of code and put it in a function with a good descriptive name.
   - similar to Extract Function, but applied to small pieces of code.
 Replace Loop with Pipeline: instead of use loops to iterate over a collection, use collection pipelines to do the task as a series of operations.
