@@ -33,6 +33,9 @@ Combine Functions into Class: transform group of functions that operate closely 
 Combine Functions into Transform: take different functions that calculate some derived value from some input data and group them in a transforming function on the input data.
   - like Combine Functions into Class.
   - a transformation function picks the argument data, deep clone it and return it with added fields, modified values, etc.
+Consolidate Conditional Expression: if you have several conditional checks that result in the same thing like returning 0, consider grouping them with AND or OR conditions.
+  - furthermore, you can take the grouped conditions and put them in a function like Extract Function. That way, you replace a statement of what you're doing with a function with a good name explaining why you're doing something.
+  - if the checks are tryly independent, then they shouldn't be thought of as a single check.
 Decompose Conditional: when you have complex conditional logic with complex conditions and complex legs, extract the condition and legs to functions.
   - by leg I mean the statements that are executed if the condition is satisfied.
   - it's like Extract Function, but applied to conditionals.
