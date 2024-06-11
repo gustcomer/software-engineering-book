@@ -33,6 +33,9 @@ Combine Functions into Class: transform group of functions that operate closely 
 Combine Functions into Transform: take different functions that calculate some derived value from some input data and group them in a transforming function on the input data.
   - like Combine Functions into Class.
   - a transformation function picks the argument data, deep clone it and return it with added fields, modified values, etc.
+Decompose Conditional: when you have complex conditional logic with complex conditions and complex legs, extract the condition and legs to functions.
+  - by leg I mean the statements that are executed if the condition is satisfied.
+  - it's like Extract Function, but applied to conditionals.
 Hide Delegate: when we have a class inside another class, don't let the Client code know about the most inner class. Make the owner class access the method inside the inner, and then pass it to the client code.
   - delegate is someone who represents other person, like a proxy. In this context it means a class that has another class inside it and access it.
   - it's basically the definition of the Law of Demeter: an object should not “reach through” its collaborators to access their collaborators' data, methods, or collaborators.
