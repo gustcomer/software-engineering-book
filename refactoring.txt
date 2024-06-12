@@ -83,6 +83,13 @@ Replace Inline Code with Function Call: take a piece of code and put it in a fun
   - similar to Extract Function, but applied to small pieces of code.
 Replace Loop with Pipeline: instead of use loops to iterate over a collection, use collection pipelines to do the task as a series of operations.
   - each step consumes and emits a collection, like chaining operations.
+Replace Nested Conditional with Guard Clauses: if the leg of the nested conditional indicates an unusual condition, bring the nested condition upfront with a guard clause.
+  - a guard clause simply mean to check an unusual condition upfront and return if true.
+  - it's a tool to bring nested if conditionals to the first conditional level.
+  - if both legs are part of normal behavior, simply use if and else.
+  - simple if then else communicates that the legs are equally likely and important.
+  - guard clauses communicate that this isn't core to this function, and if it happens, do something and get out.
+  - functions should have one entry point, but having multiple exit points instead of one can be useful and improve clarity.
 Replace Primitive with Object: take a primitive and put it behind a object providing additional behavior.
   - this concept is similar to the concept of Value Objects in DDD.
 Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
