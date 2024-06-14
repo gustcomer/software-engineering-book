@@ -61,6 +61,10 @@ Inline Class: get smaller classes and group them in a bigger class.
 Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
 Introduce Parameter Object: put a set of related input parameters into a single structure.
+Introduce Special Case: instead of checking null or other special condition everywhere in the code and doing some stuff, put that stuff into a class and add a check property method.
+  - Special Case is a P of EAA which means a subclass that provides special behavior for particular cases.
+  - it is usually used with nulls, infinity, etc. These values don't work with polymorphism, so create a class that has the same interface as what the caller expects.
+  - eg: invoking a message on null may result into a runtime error which will get you a "nice, friendly" stack trace.
 Move Field: move a field from a Class, Object or Record to another one.
   - pieces of data that are always passed to functions together are usually best put in a single record.
   - it's very frequent to move a field from a broader class into a more specific object member of the broader class. 
