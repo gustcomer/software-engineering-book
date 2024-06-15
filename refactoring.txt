@@ -60,6 +60,8 @@ Inline Class: get smaller classes and group them in a bigger class.
   - is the inverse of Extract Class.
 Inline Function [Inline Method]: the inverse of Extract Function.
 Inline Variable: the inverse of Extract Variable.
+Introduce Assertion: when sections of code work only if certain conditions are true, add assert(..).
+  - assertions should be written so that the program functions equally correctly if they are all removed.
 Introduce Parameter Object: put a set of related input parameters into a single structure.
 Introduce Special Case: instead of checking null or other special condition everywhere in the code and doing some stuff, put that stuff into a class and add a check property method.
   - Special Case is a P of EAA which means a subclass that provides special behavior for particular cases.
