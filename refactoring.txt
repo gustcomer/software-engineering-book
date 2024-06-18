@@ -101,6 +101,9 @@ Replace Primitive with Object: take a primitive and put it behind a object provi
   - this concept is similar to the concept of Value Objects in DDD.
 Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
   - depending on the language and the get methods syntax you'll access the variable directly with this.variable or variable().
+Separate Query from Modifier: separate functions that only return values from the ones with observable side effects.
+  - in other words, promote CQS.
+  - the "query" means functions that only return value without any side effect. While the "command" menas functions that have side effects.
 Slide Statements: move together things that are related to each other. Declare variables just before you first use them.
 Split Loop: if you have a loop doing two or more things, split it so it becomes more readable.
   - if the loop isn't splitted, when you have to change one thing you'll have to understand the other thing as well.
