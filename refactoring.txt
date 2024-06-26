@@ -79,6 +79,8 @@ Parameterize Function: if a function does something for a fixed parameter and yo
   - eg: functions tenPercentRaise() and fivePercentRaise() could be combined into percentRaise(factor).
 Remove Dead Code: if the code isn't used anymore, delete it. It can become a burden to understand what the code does and that is never called.
   - don't comment out dead code, you can dig it with version control in case you need the deleted code one day.
+Remove Flag Argument: extract the logic inside conditionals into separate functions. The main function should serve as a hub to redirect to the appropriate function based on the condition, rather than containing the conditional logic itself.
+  - flag argument is a function argument that the caller uses to indicate which logic the called function should execute, or which if or switch condition should be executed.
 Remove Middle Man: if the fowarding of the middle man everytime there is a new feature is irritating, abandon the Law of Demeter.
   - The Law of Demeter should be called Occasionally Useful Suggestion of Demeter.
   - it is the inverse of Hide Delegate.
