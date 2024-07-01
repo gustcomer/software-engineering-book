@@ -77,6 +77,7 @@ Move Statements Into Function: if you see some code executed every time a functi
   - it is the inverse of Move Statement to Callers.
 Parameterize Function: if a function does something for a fixed parameter and you have several functions doing the same thing with variations of that parameter, make the parameter an input and parameterize id.
   - eg: functions tenPercentRaise() and fivePercentRaise() could be combined into percentRaise(factor).
+Preserve Whole Object: instead of pulling a couple of values from a record and pass them into a function, use the whole record itself.
 Remove Dead Code: if the code isn't used anymore, delete it. It can become a burden to understand what the code does and that is never called.
   - don't comment out dead code, you can dig it with version control in case you need the deleted code one day.
 Remove Flag Argument: extract the logic inside conditionals into separate functions. The main function should serve as a hub to redirect to the appropriate function based on the condition, rather than containing the conditional logic itself.
