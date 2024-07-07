@@ -102,6 +102,9 @@ Replace Nested Conditional with Guard Clauses: if the leg of the nested conditio
   - simple if then else communicates that the legs are equally likely and important.
   - guard clauses communicate that this isn't core to this function, and if it happens, do something and get out.
   - functions should have one entry point, but having multiple exit points instead of one can be useful and improve clarity.
+Replace Parameter with Query: avoid parameters duplication. Instead of passing a parameter that can be derived from other data available within the object, you replace the parameter with a query method that computes the necessary value.
+  - the parameter list to a function should summarize the points of variability of that function, and it's logical to avoid any explicit or implicit duplication of parameters to make the list short.
+  - in this context, a "query" refers to a method that computes or retrieves a value based on the current state of some other object or class.
 Replace Primitive with Object: take a primitive and put it behind a object providing additional behavior.
   - this concept is similar to the concept of Value Objects in DDD.
 Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
