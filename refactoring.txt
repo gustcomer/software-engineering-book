@@ -105,8 +105,12 @@ Replace Nested Conditional with Guard Clauses: if the leg of the nested conditio
 Replace Parameter with Query: avoid parameters duplication. Instead of passing a parameter that can be derived from other data available within the object, you replace the parameter with a query method that computes the necessary value.
   - the parameter list to a function should summarize the points of variability of that function, and it's logical to avoid any explicit or implicit duplication of parameters to make the list short.
   - in this context, a "query" refers to a method that computes or retrieves a value based on the current state of some other object or class.
+  - it is kinda the inverse of 'Replace Query with Parameter' but here you usually avoid redundancy of the parameters and there you avoid querying global variables or stuff like that.
 Replace Primitive with Object: take a primitive and put it behind a object providing additional behavior.
   - this concept is similar to the concept of Value Objects in DDD.
+Replace Query with Parameter: technique where you replace a method that performs a query with a method that takes the result of that query as a parameter.
+  - use this when there are queries in the body of the function to global variables, elements in the same module or stuff like that
+  - it is kinda the inverse of 'Replace Parameter with Query' but here you usually avoid querying global variables or stuff like that and there you avoid redundancy of the parameters.
 Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
   - depending on the language and the get methods syntax you'll access the variable directly with this.variable or variable().
 Separate Query from Modifier: separate functions that only return values from the ones with observable side effects.
