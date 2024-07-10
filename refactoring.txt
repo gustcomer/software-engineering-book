@@ -85,6 +85,8 @@ Remove Flag Argument: extract the logic inside conditionals into separate functi
 Remove Middle Man: if the fowarding of the middle man everytime there is a new feature is irritating, abandon the Law of Demeter.
   - The Law of Demeter should be called Occasionally Useful Suggestion of Demeter.
   - it is the inverse of Hide Delegate.
+Remove Setting Method: if you don't want a field of some class to be changed, remove the setter method. That way the field is set only in the constructor.
+  - this approach makes an object's state immutable after it has been constructed.
 Rename Field: improve the name of fields to be more descriptive.
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
 Replace Conditional with Polymorphism: when you have switch statement with different types create classes for each case and use polymorphism.
