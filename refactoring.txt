@@ -78,6 +78,9 @@ Move Statements Into Function: if you see some code executed every time a functi
 Parameterize Function: if a function does something for a fixed parameter and you have several functions doing the same thing with variations of that parameter, make the parameter an input and parameterize id.
   - eg: functions tenPercentRaise() and fivePercentRaise() could be combined into percentRaise(factor).
 Preserve Whole Object: instead of pulling a couple of values from a record and pass them into a function, use the whole record itself.
+Pull Up Method: technique in OOP to move methods from subclasses to a superclass.
+  - you can use it when two methods in subclasses are equal or can be generalized (parameterized).
+  - the consolidation of the method in a common superclass avoids code duplication.
 Remove Dead Code: if the code isn't used anymore, delete it. It can become a burden to understand what the code does and that is never called.
   - don't comment out dead code, you can dig it with version control in case you need the deleted code one day.
 Remove Flag Argument: extract the logic inside conditionals into separate functions. The main function should serve as a hub to redirect to the appropriate function based on the condition, rather than containing the conditional logic itself.
@@ -89,6 +92,8 @@ Remove Setting Method: if you don't want a field of some class to be changed, re
   - this approach makes an object's state immutable after it has been constructed.
 Rename Field: improve the name of fields to be more descriptive.
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
+Replace Command with Function: if the computations are not that complex, you're better off sticking with simple functions instead of Commands.
+  - it is the inverse of Replace Function with Command.
 Replace Conditional with Polymorphism: when you have switch statement with different types create classes for each case and use polymorphism.
 Replace Constructor with Factory Function: due to limitations of the constructor method, sometimes it is better to extract the creation algorithm to its own function, which certainly will call the new operator
   - the constructor is a special function that's called to initialize an object and usually is called with the new keyword.
@@ -97,6 +102,8 @@ Replace Derived Variable with Query: remove variables that you could easily calc
   - it's more readable and if the calculation is simple, it won't affect performance.
 Replace Function with Command: when you encapsulate a function into a class mostly built around the execution  of a single method, you can refer to it as a Command Object, or simply Command.
   - the advantages are very similar to the ones found in the Command Pattern.
+  - commands are great for handling complex computations because they can easily be broken down into separate methods sharing common state through the fields.
+  - it is the inverse of Replace Command with Function.
 Replace Inline Code with Function Call: take a piece of code and put it in a function with a good descriptive name.
   - similar to Extract Function, but applied to small pieces of code.
 Replace Loop with Pipeline: instead of use loops to iterate over a collection, use collection pipelines to do the task as a series of operations.
