@@ -95,6 +95,8 @@ Replace Constructor with Factory Function: due to limitations of the constructor
 Replace Derived Variable with Query: remove variables that you could easily calculate.
   - instead of storing a variable that is a simple calculation, do the simple calculation every time you query the result.
   - it's more readable and if the calculation is simple, it won't affect performance.
+Replace Function with Command: when you encapsulate a function into a class mostly built around the execution  of a single method, you can refer to it as a Command Object, or simply Command.
+  - the advantages are very similar to the ones found in the Command Pattern.
 Replace Inline Code with Function Call: take a piece of code and put it in a function with a good descriptive name.
   - similar to Extract Function, but applied to small pieces of code.
 Replace Loop with Pipeline: instead of use loops to iterate over a collection, use collection pipelines to do the task as a series of operations.
