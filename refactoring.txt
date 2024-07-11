@@ -90,6 +90,8 @@ Remove Setting Method: if you don't want a field of some class to be changed, re
 Rename Field: improve the name of fields to be more descriptive.
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
 Replace Conditional with Polymorphism: when you have switch statement with different types create classes for each case and use polymorphism.
+Replace Constructor with Factory Function: due to limitations of the constructor method, sometimes it is better to extract the creation algorithm to its own function, which certainly will call the new operator
+  - the constructor is a special function that's called to initialize an object and usually is called with the new keyword.
 Replace Derived Variable with Query: remove variables that you could easily calculate.
   - instead of storing a variable that is a simple calculation, do the simple calculation every time you query the result.
   - it's more readable and if the calculation is simple, it won't affect performance.
