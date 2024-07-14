@@ -81,6 +81,12 @@ Preserve Whole Object: instead of pulling a couple of values from a record and p
 Pull Up Method: technique in OOP to move methods from subclasses to a superclass.
   - you can use it when two methods in subclasses are equal or can be generalized (parameterized).
   - the consolidation of the method in a common superclass avoids code duplication.
+  - is the inverse of the Push Down Method.
+Push Down Field: if a field is only used by one subclass, move it to the subclass.
+  - it is the inverse of Pull Up Field.
+Push Down Method: if a method is only relevant to one subclass, removing it from the superclass and putting it only on the subclass makes that clearer.
+  - if the caller doesn't need to know the subclass it is calling, use Replace Conditional with Polymorphism instead.
+  - is the inverse of the Pull Up Method.
 Remove Dead Code: if the code isn't used anymore, delete it. It can become a burden to understand what the code does and that is never called.
   - don't comment out dead code, you can dig it with version control in case you need the deleted code one day.
 Remove Flag Argument: extract the logic inside conditionals into separate functions. The main function should serve as a hub to redirect to the appropriate function based on the condition, rather than containing the conditional logic itself.
