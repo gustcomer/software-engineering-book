@@ -1,0 +1,12 @@
+
+DOMAIN LOGIC PATTERNS
+  - Transaction Scripts
+
+################################################################################
+Patterns
+
+Transaction Scripts: "Organizes business logic by procedures where each procedure handles a single request from the presentation."
+  - usually we put each procedure inside a Service class, and in the same Service Class we group all auxiliary methods that the procedure could need. We could also call this class Transaction Class.
+  - a Service in this context is a class that encapsulates business logic and operations. They act as intermediaries between the application's user interface and the data access layer.
+  - a Transaction in this context typically refers to a series of operations that must be completed together to maintain data integrity. I believe Transaction and Service could be synonims in this context.
+  - the Script term reflects the sequential, step-by-step nature of the code, meaning that for each procedure we will have a self-contained Service Class with all the procedures needed.
