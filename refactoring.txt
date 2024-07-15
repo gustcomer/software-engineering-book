@@ -96,6 +96,9 @@ Remove Middle Man: if the fowarding of the middle man everytime there is a new f
   - it is the inverse of Hide Delegate.
 Remove Setting Method: if you don't want a field of some class to be changed, remove the setter method. That way the field is set only in the constructor.
   - this approach makes an object's state immutable after it has been constructed.
+Remove Subclass: sometimes the variations supported in data structures and the polymorphic behavior supported by subclasses are not necessary anymore. In this case, replace the subclass by a field in the superclass.
+  - a subclass that does too little incurs a cost in understanding that is no longer worthwhile.
+  - it is the inverse of Replace Type with Subclass.
 Rename Field: improve the name of fields to be more descriptive.
 Rename Variable: improve the name of the variable as your understanding of the problem grows.
 Replace Command with Function: if the computations are not that complex, you're better off sticking with simple functions instead of Commands.
