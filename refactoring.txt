@@ -55,6 +55,7 @@ Extract Class: when a single class has too many data and methods, try to extract
   - it is usually common to extract Value Objects from a bigger object.
   - the inverse is Inline Class.
 Extract Function [Extract Method]: look at a fragment of code, understand what it is doing, then extract it into its own function named after its purpose.
+Extract Superclass: when you see two classes doing similar things, you can take advantage of the basic mechanism of inheritance to pull their similarities together into a superclass.
 Extract Variable [Introduce Explaining Variable]: if an expression becomes very complex, create some local variables with good explanatory names and replace part of the expression.
 Inline Class: get smaller classes and group them in a bigger class.
   - is the inverse of Extract Class.
