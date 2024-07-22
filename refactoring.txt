@@ -6,9 +6,11 @@ Duplicated Code: same code in more than one place
 Long Functions: smaller functions are prefered since they are easier to understand.
   - usually apply Extract Function to get smaller functions.
 Long Parameter List: indicates a function or method with too many parameters.
-  - in some cases you could use Replace Parameter with Query to reduce correlated parameters.
-  - you can group parameters into an object with Introduce Parameter Object.
-  - when multiple functions share several parameter values, you can use Combine Functions into Class.
+  - there are three ways to reduce the number of parameters:
+    [1] in some cases you could use Replace Parameter with Query to reduce correlated parameters.
+    [2] you can group parameters into an object with Introduce Parameter Object.
+    [3] when multiple functions share several parameter values, you can use Combine Functions into Class.
+  - you can think of classes as a way of moving parameters into the constructor which will turn the variables shareable via the 'this' keyword.
 Misterious Name: use good and descriptive names in functions, modules, variables, classes, etc.
   - related to Change Function Declaration refactor.
 Shotgun Surgery[F]: every time you make a change, you have to make a lot of little edits to a lot of different classes.
