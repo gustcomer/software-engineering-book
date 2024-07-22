@@ -3,7 +3,7 @@ CODE SMELLS - Fowler and Beck
 
 Duplicated Code: same code in more than one place
   - you can solve it with Extract Function
-Global Data: the problem with global data is that it can be modified from anywhere in the code base, and there’s no mechanism to discover which bit of code touched it.
+Global Data: the problem with global data is that it can be modified from anywhere in the code base, and there’s no mechanism to discover which bit of code touched it. This imply that they are hard to test.
   - if you assure that the global variables won't change after the program starts (make them constants), then it is safe.
   - Paracelsus’s maxim: The difference between a poison and something benign is the dose. You can get away with small doses of global data.
   - to get rid of Global Data, use Encapsulate Variable, or start working with classes so that the variables will have class scope instead of global scope.
@@ -18,6 +18,13 @@ Long Parameter List: indicates a function or method with too many parameters.
   - the alternative to share parameters between classes would be using global variables.
 Misterious Name: use good and descriptive names in functions, modules, variables, classes, etc.
   - related to Change Function Declaration refactor.
+Mutable Data: changing the data can be a source of bugs, especially if the variable is shared in another part of the software.
+  - a solution would be to make everything const instead of using let. This is SRP, and the root of the discussion between let vs const.
+  - a remedy to this would be Functional Programming which is based on the notion that data should never change and that updating a data structure should always return a new copy of the structure with the change.
+  - you can use Encapsulate Variable to hedge the scope of the changes to narrow functions that can be easier to monitor, evolve and test.
+  - if a variable has many meanings, use Split Variable to separate the sources of change, according to SRP. It would also favor the use of const instead of let.
+  - to avoid mutable data use Separate Query from Modifier, which is basically promoting CQS.
+  - obviously the Remove Setting Method would also help to avoid mutating the data since you don't provide setters anymore.
 Shotgun Surgery[F]: every time you make a change, you have to make a lot of little edits to a lot of different classes.
 
 ################################################################################
@@ -107,6 +114,7 @@ Remove Middle Man: if the fowarding of the middle man everytime there is a new f
   - it is the inverse of Hide Delegate.
 Remove Setting Method: if you don't want a field of some class to be changed, remove the setter method. That way the field is set only in the constructor.
   - this approach makes an object's state immutable after it has been constructed.
+  - it also promotes that the variable be changed only by business logic.
 Remove Subclass: sometimes the variations supported in data structures and the polymorphic behavior supported by subclasses are not necessary anymore. In this case, replace the subclass by a field in the superclass.
   - a subclass that does too little incurs a cost in understanding that is no longer worthwhile.
   - it is the inverse of Replace Type with Subclass.
