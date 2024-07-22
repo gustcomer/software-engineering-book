@@ -3,6 +3,10 @@ CODE SMELLS - Fowler and Beck
 
 Duplicated Code: same code in more than one place
   - you can solve it with Extract Function
+Global Data: the problem with global data is that it can be modified from anywhere in the code base, and there’s no mechanism to discover which bit of code touched it.
+  - if you assure that the global variables won't change after the program starts (make them constants), then it is safe.
+  - Paracelsus’s maxim: The difference between a poison and something benign is the dose. You can get away with small doses of global data.
+  - to get rid of Global Data, use Encapsulate Variable, or start working with classes so that the variables will have class scope instead of global scope.
 Long Functions: smaller functions are prefered since they are easier to understand.
   - usually apply Extract Function to get smaller functions.
 Long Parameter List: indicates a function or method with too many parameters.
@@ -11,6 +15,7 @@ Long Parameter List: indicates a function or method with too many parameters.
     [2] you can group parameters into an object with Introduce Parameter Object.
     [3] when multiple functions share several parameter values, you can use Combine Functions into Class.
   - you can think of classes as a way of moving parameters into the constructor which will turn the variables shareable via the 'this' keyword.
+  - the alternative to share parameters between classes would be using global variables.
 Misterious Name: use good and descriptive names in functions, modules, variables, classes, etc.
   - related to Change Function Declaration refactor.
 Shotgun Surgery[F]: every time you make a change, you have to make a lot of little edits to a lot of different classes.
