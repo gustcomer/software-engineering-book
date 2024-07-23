@@ -25,6 +25,8 @@ Mutable Data: changing the data can be a source of bugs, especially if the varia
   - if a variable has many meanings, use Split Variable to separate the sources of change, according to SRP. It would also favor the use of const instead of let.
   - to avoid mutable data use Separate Query from Modifier, which is basically promoting CQS.
   - obviously the Remove Setting Method would also help to avoid mutating the data since you don't provide setters anymore.
+  - remove derived data that you could easily calculate with Replace Derived Variable with Query.
+  - mutating data can be risk controlled if you reduce the scope of the variables with Combine Functions into Class or Combine Functions into Transform.
 Shotgun Surgery[F]: every time you make a change, you have to make a lot of little edits to a lot of different classes.
 
 ################################################################################
@@ -46,7 +48,9 @@ Change Reference to Value: for nested objects within other objects, you can trea
 Change Value to Reference: if you use an entity in multiple places and you have to update it, it is wise to use Reference.
   - to make sure that the same instance of the entity is being used in the multiple parts of the program, you should use some kind of repository or singleton.
   - it is the inverse of Change Reference to Value.
-Combine Functions into Class: transform group of functions that operate closely together on a common body of data usually passed as arguments to the function call.
+Collape Hierarchy: sometimes it makes sense to merge a feature that is in a subclass into the superclass to exclude the subclass. (or vice versa).
+  - it is like removing subclasses but applies to only one subclass.
+Combine Functions into Class: transform group of functions that operate closely together on a common body of data usually passed as arguments to the function call into a class to share these parameters among methods.
 Combine Functions into Transform: take different functions that calculate some derived value from some input data and group them in a transforming function on the input data.
   - like Combine Functions into Class.
   - a transformation function picks the argument data, deep clone it and return it with added fields, modified values, etc.
