@@ -158,6 +158,7 @@ Replace Query with Parameter: technique where you replace a method that performs
   - it is kinda the inverse of 'Replace Parameter with Query' but here you usually avoid querying global variables or stuff like that and there you avoid redundancy of the parameters.
 Replace Subclass with Delegate: it's basically favor composition over inheritance.
   - the inheritance card can only be played once. If you have more than one reason to vary something, you can only use inheritance for a single axis of variation.
+Replace Superclass with Delegate: like Replace Subclass with Delegate, but instead of discarding the subclass, you discard the superclass and keep the subclass.
 Replace Temp with Query: you take a temporary variable used inside some method of some object and extract it as the object attribute and use some getter method. Then you access the variable with this.variable.
   - depending on the language and the get methods syntax you'll access the variable directly with this.variable or variable().
 Replace Type Code with Subclasses: instead of a big class that has a type and deals with situations in different ways depending on the type, promote subclasses.
