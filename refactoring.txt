@@ -1,8 +1,8 @@
 ################################################################################
 CODE SMELLS - Fowler and Beck
 
-Duplicated Code: same code in more than one place
-  - you can solve it with Extract Function
+Duplicated Code: you shouldn't see the same code structure in more than one place.
+  - solve it with Extract Function.
 Global Data: the problem with global data is that it can be modified from anywhere in the code base, and there’s no mechanism to discover which bit of code touched it. This imply that they are hard to test.
   - if you assure that the global variables won't change after the program starts (make them constants), then it is safe.
   - Paracelsus’s maxim: The difference between a poison and something benign is the dose. You can get away with small doses of global data.
@@ -17,6 +17,7 @@ Long Parameter List: indicates a function or method with too many parameters.
   - you can think of classes as a way of moving parameters into the constructor which will turn the variables shareable via the 'this' keyword.
   - the alternative to share parameters between classes would be using global variables.
 Misterious Name: use good and descriptive names in functions, modules, variables, classes, etc.
+  - you shouldn't be puzzling over a name to understand what it does. Names in our code should be mundane and clear.
   - related to Change Function Declaration refactor.
 Mutable Data: changing the data can be a source of bugs, especially if the variable is shared in another part of the software.
   - a solution would be to make everything const instead of using let. This is SRP, and the root of the discussion between let vs const.
