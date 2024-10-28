@@ -1,0 +1,51 @@
+================================================================================
+Glossary
+
+Architectural Characteristics: critical capabilities or qualities that the software architecture needs to support.
+  eg: Scalability, Performance, Availability, Security, Maintainability, Testability, Extensibility.
+  aka: nondomain design considerations.
+Architectural Decisions: key choices that define the structure, behavior, and attributes of the system
+  - it is good practice to document the decisions with ADRs.
+Architectural Style: defines the overall shape and structure of a software system.
+  - each architectural style has its own strengths and trade-offs
+Logical Components: functional building blocks of a system that define its behavior and structure.
+  - these components represent distinct units of functionality that work together to fulfill the requirements of the system.
+Perspectives
+  Architectural Perspective: about the structure of the system. Things like services, databases, and how services communicate with each other and the user interface.
+    - Martin Fowler once wrote that it is the stuff that's hard to change.
+    - these aspects are more Strategic, require High Effort to construct or change, involves More Significant Trade-Offs.
+  Design Perspective: process of defining the structure, components, interfaces, and data of a system to meet specified requirements.
+    - these aspects are more Tactical, require Less Effort to construct of change, involves Less Significant Trade-Offs.
+
+================================================================================
+Architectural Characteristics
+
+Process architectural characteristics: reflect the decisions about the mechanics of building software. It's where software development process intersects with software architecture.
+  - modularity, testability, agility, deployability, extensibility, decouple-ability
+Structural architectural characteristics: involve internal structure of the software system like degree of coupling between components.
+  - portability, extensibility, localization, maintainability, security.
+Operational architectural characteristics: related to architectural decisions that influence operational team members.
+  - availability, recoverability, robustness, performance, reliability/safety, scalability.
+Cross-cutting architectural characteristics: characteristics that defy categorization.
+  - security, legal, authentication/authorization, privacy, accessibility, usability.
+
+Agility: the system's ability to respond quickly to change.
+  - a function of Maintainability, Testability, and Deployability.
+Availability: the amount of uptime of a system, usually measured in "nines", like 99,99%.
+Extensibility: ease with which the system can be enhanced to support additional features and functionality.
+Fault Tolerance: system's ability to keep its other parts functioning when fatal errors occur.
+Feasibility: feasibility of complete a task taking into account time frames, budgets, and developer skills when making architectural choices.
+Interoperability: system's ability to interface and interact with other systems to complete a business request.
+Localization: how well the system supports multiple languages, units of measurement, currencies and other factors that allow it to be used globally.
+Maintainability: how easily a system can be modified, updated, or extended to fix bugs, improve performance, add new features, or adapt to changing requirements.
+  - allows developers to make changes with minimal effort and risk, ensuring the system remains functional and efficient over time.
+  - many different people should be able to work on the system productively.
+Modularity:  dividing a system into distinct, self-contained units or modules that can function independently and interact with each other through well-defined interfaces.
+Performance: amount of time it takes for the system to process a business request.
+Portability: how easy it is to run the system on more than one platform.
+Reliability: ability of a system to consistently perform its intended functions without failure over a specified period.
+  - ensures that the system operates correctly under predefined conditions and can recover from failures without compromising data integrity or causing system downtime.
+  aka: Safety
+Scalability: system's ability to maintain a consistent response time and error rate as the number of users or requests increases.
+Security: practices and mechanisms used to protect the system and its data from unauthorized access, malicious attacks, and breaches.
+Testability: refers to how easily and effectively the system can be tested to ensure that it functions correctly and meets its requirements.
