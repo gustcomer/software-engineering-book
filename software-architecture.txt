@@ -1,9 +1,10 @@
 ================================================================================
 Glossary
 
-Architectural Characteristics: critical capabilities or qualities that the software architecture needs to support.
+Architectural Characteristics (Nonfunctional Requirements): critical capabilities or qualities that the software architecture needs to support.
   eg: Scalability, Performance, Availability, Security, Maintainability, Testability, Extensibility.
   aka: nondomain design considerations.
+  opinion: nonfunctional requirements downplays their importance just because they don't concern the Domain.
 Architectural Decisions: key choices that define the structure, behavior, and attributes of the system
   - it is good practice to document the decisions with ADRs.
 Architectural Style: defines the overall shape and structure of a software system.
@@ -32,6 +33,7 @@ Cross-cutting architectural characteristics: characteristics that defy categoriz
 Agility: the system's ability to respond quickly to change.
   - a function of Maintainability, Testability, and Deployability.
 Availability: the amount of uptime of a system, usually measured in "nines", like 99,99%.
+Compliance: ensures a system aligns with specific standards, regulations, laws, or guidelines.
 Extensibility: ease with which the system can be enhanced to support additional features and functionality.
 Fault Tolerance: system's ability to keep its other parts functioning when fatal errors occur.
 Feasibility: feasibility of complete a task taking into account time frames, budgets, and developer skills when making architectural choices.
